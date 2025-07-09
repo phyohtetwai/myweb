@@ -1,81 +1,87 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title> HOME </title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f2f2f2;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    .button {
+      margin: 1rem;
+      padding: 1.5rem 2rem;
+      font-size: 1.2rem;
+      font-weight: bold;
+      border-radius: 12px;
+      border: 2px solid transparent;
+      color: white;
+      width: 90%;
+      max-width: 400px;
+      transition: all 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: white;
+      color: red;
+      border-color: black;
+    }
+
+    .green { background-color: green; }
+    .blue { background-color: blue; }
+    .red { background-color: red; }
+    .link-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    @media (max-width: 600px) {
+      .button {
+        font-size: 1rem;
+        padding: 1rem;
+      }
+    }
+  </style>
 </head>
-<style>
-.fb_btn{margin-left:50px;margin-right:100px;}
-.mess_btn{margin-left:150px;}
-#bt1{margin-top:10%;width:500px;height:100px;color:white;background-color:green;border-radius:15px;font-size:30px;font-weight:bold;border-color:white;font-family:times,serif;}
-#bt1:hover{color:red;background-color:white;margin-top:10%;width:500px;height:100px;border-radius:15px;font-size:30px;font-weight:bold;border-color:black;font-family:times,serif;}
-#bt2{margin-top:10%;width:300px;height:100px;color:white;background-color:blue;border-radius:15px;font-size:30px;font-weight:bold;border-color:white;font-family:times,serif;}
-#bt2:hover{color:red;background-color:white;margin-top:10%;width:300px;height:100px;border-radius:15px;font-size:30px;font-weight:bold;border-color:black;font-family:times,serif;}
-#bt3{margin-top:10%;width:500px;height:100px;color:white;background-color:red;border-radius:15px;font-size:30px;font-weight:bold;border-color:white;font-family:times,serif;}
-#bt3:hover{color:red;background-color:white;margin-top:10%;width:500px;height:100px;border-radius:15px;font-size:30px;font-weight:bold;border-color:black;font-family:times,serif;}
-</style>
-<script type="text/javascript">
-  
-  alert('this page is only compatible with "Mobile VIEW" ! ');
-  
-  function scam()
-{
-window.open("http://scam.cronus.name/cgi/check");
-}
-function cccam()
-{
-window.open("https://testious.com/");
-}
-function tp()
-{
-window.open("./strongtp.html");
-}
-function beam()
-{
-window.open("https://www.satbeams.com/footprints");
-}
-function usb()
-{
-window.open("./usbupgrade.html");
-}
-function fb()
-{
-window.open("https://www.facebook.com/kophyo.cccam");
-}
-function mess()
-{
-window.open("https://m.me/kophyo.cccam");
-}
-function c_arrange()
-{
-window.open("./c_arrange.html");
-}
-function porn()
-{
-window.open("./porn.html");
-}
-function remotecopy()
-{
-window.open("./remote-copy.html");
-}
-function ob2b()
-{
-window.open("./ooredoob2b.html");
-}
-function ddaygame()
-{
-window.open("https://www.mediafire.com/file/ran6ribrj8geg9g/Frontline_Command_D-Day_Mod_www.apkasw.com.apk/file");
-}
-</script>
 <body>
-<center><input id="bt2" type="button" onclick="ddaygame()" value="D-DAY Game Down" /></center>
-<input class="fb_btn" id="bt2" type="button" onclick="fb()" value="Facebook" />
-<input class="mess_btn" id="bt2" type="button" onclick="mess()" value="Messenger" />
-<center><input id="bt1" type="button" onclick="scam()" value="Check Scam Validity" /></center><br/>
-<center><input id="bt1" type="button" onclick="cccam()" value="Check Cccam Active" /></center>
-<center><input id="bt1" type="button" onclick="tp()" value="Check Strong TP" /></center>
-<center><input id="bt1" type="button" onclick="beam()" value="Check Sat Beams" /></center>
-<center><input id="bt1" type="button" onclick="usb()" value="Usb Upgrade Solved" /></center>
-<center><input id="bt1" type="button" onclick="c_arrange()" value="Hellobox Channel Arrange" /></center>
-<center><input id="bt1" type="button" onclick="remotecopy()" value="Hellobox Remote Copy" /></center>
-<center><input id="bt3" type="button" onclick="porn()" value="DARK ZOne (18+)" /></center>
+  <script>
+    alert('This page is best viewed on Mobile!');
+
+    const openLink = (url) => window.open(url);
+  </script>
+
+  <div class="container">
+    <button class="button blue" onclick="openLink('https://www.mediafire.com/file/ran6ribrj8geg9g/Frontline_Command_D-Day_Mod_www.apkasw.com.apk/file')">D-DAY Game Down</button>
+
+    <div class="link-row">
+      <button class="button blue" onclick="openLink('https://www.facebook.com/kophyo.cccam')">Facebook</button>
+      <button class="button blue" onclick="openLink('https://m.me/kophyo.cccam')">Messenger</button>
+    </div>
+
+    <button class="button green" onclick="openLink('http://scam.cronus.name/cgi/check')">Check Scam Validity</button>
+    <button class="button green" onclick="openLink('https://testious.com/')">Check Cccam Active</button>
+    <button class="button green" onclick="openLink('./strongtp.html')">Check Strong TP</button>
+    <button class="button green" onclick="openLink('https://www.satbeams.com/footprints')">Check Sat Beams</button>
+    <button class="button green" onclick="openLink('./usbupgrade.html')">Usb Upgrade Solved</button>
+    <button class="button green" onclick="openLink('./c_arrange.html')">Hellobox Channel Arrange</button>
+    <button class="button green" onclick="openLink('./remote-copy.html')">Hellobox Remote Copy</button>
+
+    <button class="button red" onclick="openLink('./porn.html')">DARK ZOne (18+)</button>
+  </div>
 </body>
 </html>
