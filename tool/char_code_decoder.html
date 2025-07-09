@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head><title>fromCharCode Decoder</title></head>
+<body>
+  <input type="text" id="input" placeholder="Enter ASCII codes like 72,101,108">
+  <button onclick="decode()">Decode</button>
+  <p id="output"></p>
+
+  <script>
+    function decode() {
+      const input = document.getElementById('input').value;
+      const codes = input.split(',').map(Number);
+      const text = String.fromCharCode(...codes);
+      document.getElementById('output').innerText = text;
+    }
+  </script>
+</body>
+</html>
