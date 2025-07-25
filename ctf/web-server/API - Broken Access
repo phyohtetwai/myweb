@@ -1,8 +1,10 @@
-Challenge : Your friend has set up a platform where you can register and post a private note. Everything is based on an API. Before setting up the Front-End, he asked you to check that everything was secure.
+Challenge : Your friend has set up a platform where you can register and post a private note. 
+Everything is based on an API. Before setting up the Front-End, he asked you to check that everything was secure.
+
 Site : http://api-broken-access.challenge01.root-me.org/
 
-Solution : There have 4 API options (signup, login, user, note). I can test all these APIs. 
-I found the vulnerability in 'retrieve user information'. API is '/api/user'. If i see the response 'userid is 2'.
+Solution : There have 4 API options (signup, login, user, note). I'm tested all these APIs and normally work. 
+I found the vulnerability in 'retrieve user information'. API is '/api/user'. I found the response 'userid is 2'.
 So, i can guess the admin's id 'that is 1'.
 
 API call :
