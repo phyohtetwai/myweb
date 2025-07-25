@@ -20,6 +20,11 @@
 # Exploit
 # So, we need to use this method to say that i am a client of you network.
 
+# We can use an IP address from the following ranges:
+# 10.0.0.0/8
+# 172.16.0.0/12
+# 192.168.0.0/16
+
 import requests
 
 HEADERS = {
