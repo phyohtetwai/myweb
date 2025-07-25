@@ -1,0 +1,10 @@
+Challenge : Your friend has set up a platform where you can register and post a private note. Everything is based on an API. Before setting up the Front-End, he asked you to check that everything was secure.
+Site : http://api-broken-access.challenge01.root-me.org/
+
+Solution : There have 4 API options (signup, login, user, note). I can test all these APIs. 
+I found the vulnerability in 'retrieve user information'. API is '/api/user'. If i see the response 'userid is 2'.
+So, i can guess the admin's id 'that is 1'.
+
+API call :
+http://api-broken-access.challenge01.root-me.org/api/user/2 #That is my registered user's api
+http://api-broken-access.challenge01.root-me.org/api/user/1 #That is admin's api. FLAG can found on admin's note.
