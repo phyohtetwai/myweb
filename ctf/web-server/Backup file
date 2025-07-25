@@ -1,0 +1,12 @@
+Challenge : Find the backup file and exploit the site
+Site : http://challenge01.root-me.org/web-serveur/ch11/
+
+Solution : This site have no clue for me. I'm trying to dir listing attack with gobuster and that is not work.
+Also attack with bruteforte but i can't get the password and i known that is not the weak password.
+
+Then guess the common backup suffixes index.php.bak, index.php_bak, index.php-baketc., they all jump to 404.
+Later I thought about it. Web services are generally on Linux systems. The commonly used text editor in Linux is vim. When vim turns on automatic backup, the suffix of the backup file is a tilde ~ .
+So, I tried to add the tilde (~) at the end of the url as below :
+http://challenge01.root-me.org/web-serveur/ch11/index.php~
+
+And then 'index.php~' is downloading on my browser and opened it. I founded the username and password. Login and I get the FLAG.
