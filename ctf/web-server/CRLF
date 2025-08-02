@@ -26,4 +26,8 @@ Note :
 %20 = space ( )
 %0d = carriage return (\r)
 %0a = line feed (\n)
+CRLF = Carriage Return + Line Feed
 
+If site has CRLF Vulnerability, after send payload i'll got new header in "Sever response". Behind '%0d%0a' is injected header name.
+E.g : username=admin%20authenticated.%0d%0aSet-Cookie:%20admin=true&password=none, i'll got "Server response" as "Set-Cookie: admin=true". Now, i can access admin access via this.
+Note :
