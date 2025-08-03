@@ -1,0 +1,16 @@
+Challenge : Your goal is to hack this photo galery by uploading PHP code. Retrieve the validation password in the file .passwd at the root of the application.
+Site : http://challenge01.root-me.org/web-serveur/ch20/?galerie=apps
+
+1: Firstly, i browse the site and check all categories of the site. There've 6 categories and 5 categories are simple but 1 category "Upload" is distinct.
+  If i upload image, this site provide image's uploaded url path. e.g "http://challenge01.root-me.org/web-serveur/ch20/galerie/upload/163e004606e3954b8331ca1810c69ad5/hot_banner.png".
+2: My uploaded file name is "hot_banner.png". So, server's root path is "/galerie".
+3: I will create a php script to exploit called path traversal payload, file name as "exp.php.png". (Server only accept .gif, .jpeg and .png)
+Exploit code:
+<?php
+$content = shell_exec('cat ../../../.passwd');
+echo "<pre>$content</pre>";
+?>
+Exploit code:
+
+4: Upload this file and browse the uploaded file path provided from server.
+5: I got the FLAG.
