@@ -7,7 +7,7 @@ Site : http://challenge01.root-me.org/web-serveur/ch61/
    Command:
 wget -r http://challenge01.root-me.org/web-serveur/ch61/.git
    Command:
-3: If i got this directory, i'm installed "git-cola" on windows and open this directory. After open, i found FLAG in config.php.
+3: If i got this directory, i'm installed "git-cola" on windows and open this directory. After open, i found FLAG in "config.php" and hashed with SHA256.
    config.php:
  <?php
  	$username = "admin";
