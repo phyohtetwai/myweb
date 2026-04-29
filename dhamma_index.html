@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ဓမ္မစက္ကပ္ပဝတ္တနသုတ်</title>
+
+  <style>
+    :root {
+      --bg: #f8f5ee;
+      --paper: #ffffff;
+      --text: #2b241c;
+      --muted: #7a6650;
+      --accent: #9b6a2f;
+      --accent-dark: #7a4f20;
+      --border: #eadfce;
+      --soft: #fbf7ef;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background:
+        radial-gradient(circle at top, rgba(155, 106, 47, 0.12), transparent 34%),
+        var(--bg);
+      color: var(--text);
+      font-family: "Myanmar Text", "Noto Sans Myanmar", "Padauk", "Pyidaungsu", serif;
+      line-height: 1.9;
+      font-size: 18px;
+    }
+
+    .page {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 42px 16px;
+    }
+
+    .hero {
+      text-align: center;
+      background: var(--paper);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 48px 28px;
+      box-shadow: 0 14px 34px rgba(0, 0, 0, 0.06);
+      margin-bottom: 28px;
+    }
+
+    .badge {
+      display: inline-block;
+      color: var(--accent);
+      background: var(--soft);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 6px 16px;
+      font-size: 0.92rem;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      margin: 0 0 14px;
+      color: var(--accent);
+      font-size: 2.25rem;
+      line-height: 1.65;
+      font-weight: 700;
+    }
+
+    .subtitle {
+      max-width: 720px;
+      margin: 0 auto;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px;
+      margin-top: 28px;
+    }
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 260px;
+      background: var(--paper);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 30px;
+      text-decoration: none;
+      color: var(--text);
+      box-shadow: 0 10px 26px rgba(0, 0, 0, 0.045);
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 34px rgba(0, 0, 0, 0.08);
+      border-color: rgba(155, 106, 47, 0.45);
+    }
+
+    .card h2 {
+      margin: 0 0 12px;
+      color: var(--accent);
+      font-size: 1.35rem;
+      line-height: 1.75;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+      text-align: justify;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 24px;
+      background: var(--accent);
+      color: #ffffff;
+      border-radius: 999px;
+      padding: 10px 20px;
+      font-size: 0.95rem;
+      text-align: center;
+      align-self: flex-start;
+    }
+
+    .card:hover .button {
+      background: var(--accent-dark);
+    }
+
+    .footer {
+      margin-top: 34px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    @media (max-width: 720px) {
+      body {
+        font-size: 16px;
+      }
+
+      .page {
+        padding: 22px 12px;
+      }
+
+      .hero {
+        padding: 34px 20px;
+        border-radius: 18px;
+      }
+
+      h1 {
+        font-size: 1.55rem;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+
+      .card {
+        min-height: auto;
+        padding: 24px 20px;
+      }
+
+      .card h2 {
+        font-size: 1.15rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="page">
+    <section class="hero">
+      <span class="badge">ဓမ္မစာမျက်နှာ</span>
+      <h1>ဓမ္မစက္ကပ္ပဝတ္တနသုတ်</h1>
+      <p class="subtitle">
+        ဓမ္မစကြာသုတ် ပါဠိတော်နှင့် မြန်မာပြန်ကို သီးခြားစာမျက်နှာများအဖြစ် ဖတ်ရှုနိုင်ရန် စီစဉ်ထားပါသည်။
+      </p>
+    </section>
+
+    <section class="cards" aria-label="ဓမ္မစက္ကပ္ပဝတ္တနသုတ် စာမျက်နှာများ">
+      <a class="card" href="dhammacakkappavattana-pali.html">
+        <div>
+          <h2>ဓမ္မစက္ကပ္ပဝတ္တနသုတ် ပါဠိတော်</h2>
+          <p>
+            ဆဋ္ဌသံဂါယနာမူအတိုင်း ဓမ္မစကြာသုတ် ပါဠိတော်ကို စနစ်တကျ အပိုဒ်ခွဲ၍ ဖတ်ရှုနိုင်သော စာမျက်နှာဖြစ်သည်။
+          </p>
+        </div>
+        <span class="button">ပါဠိတော် ဖတ်ရန်</span>
+      </a>
+
+      <a class="card" href="dhammacakkappavattana-myanmar.html">
+        <div>
+          <h2>ဓမ္မစက္ကပ္ပဝတ္တနသုတ် မြန်မာပြန်</h2>
+          <p>
+            ဓမ္မစကြာသုတ်၏ မြန်မာဘာသာပြန်ကို ဖတ်ရလွယ်ကူစေရန် ခေါင်းစဉ်များ၊ အပိုဒ်ခွဲများဖြင့် စီစဉ်ထားသော စာမျက်နှာဖြစ်သည်။
+          </p>
+        </div>
+        <span class="button">မြန်မာပြန် ဖတ်ရန်</span>
+      </a>
+    </section>
+
+    <p class="footer">
+      ဓမ္မစကြာ · ဓမ္မစကြာသုတ် · ဓမ္မစက္ကပ္ပဝတ္တနသုတ်
+    </p>
+  </main>
+</body>
+</html>
