@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home</title>
+
+  <style>
+    :root {
+      --text: #ffffff;
+      --muted: rgba(255, 255, 255, 0.78);
+      --card: rgba(255, 255, 255, 0.12);
+      --card-border: rgba(255, 255, 255, 0.22);
+      --shadow: rgba(0, 0, 0, 0.35);
+
+      --green: #16a34a;
+      --green-dark: #15803d;
+      --blue: #2563eb;
+      --blue-dark: #1d4ed8;
+      --red: #dc2626;
+      --red-dark: #b91c1c;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background:
+        linear-gradient(135deg, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.35)),
+        url("./img/bg.jpg") no-repeat center center fixed;
+      background-size: cover;
+      color: var(--text);
+    }
+
+    .container {
+      min-height: 100vh;
+      padding: 32px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .panel {
+      width: 100%;
+      max-width: 980px;
+      padding: 34px;
+      border: 1px solid var(--card-border);
+      border-radius: 28px;
+      background: rgba(0, 0, 0, 0.52);
+      box-shadow: 0 22px 60px var(--shadow);
+      backdrop-filter: blur(16px);
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 28px;
+    }
+
+    .badge {
+      display: inline-block;
+      margin-bottom: 14px;
+      padding: 7px 16px;
+      border: 1px solid var(--card-border);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.1);
+      color: var(--muted);
+      font-size: 0.88rem;
+      letter-spacing: 0.4px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2rem, 5vw, 3.4rem);
+      line-height: 1.15;
+      letter-spacing: -0.04em;
+    }
+
+    .subtitle {
+      max-width: 620px;
+      margin: 14px auto 0;
+      color: var(--muted);
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+
+    .featured {
+      margin-bottom: 18px;
+    }
+
+    .link-row {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin: 14px 0;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 14px;
+    }
+
+    .button {
+      width: 100%;
+      min-height: 72px;
+      padding: 16px 18px;
+      border: 1px solid transparent;
+      border-radius: 18px;
+      color: white;
+      font-size: 1.02rem;
+      font-weight: 700;
+      line-height: 1.45;
+      cursor: pointer;
+      transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background-color 0.2s ease,
+        border-color 0.2s ease;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.22);
+    }
+
+    .button:hover {
+      transform: translateY(-3px);
+      border-color: rgba(255, 255, 255, 0.72);
+      box-shadow: 0 16px 30px rgba(0, 0, 0, 0.32);
+    }
+
+    .button:active {
+      transform: translateY(0);
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.24);
+    }
+
+    .button:focus-visible {
+      outline: 3px solid rgba(255, 255, 255, 0.85);
+      outline-offset: 4px;
+    }
+
+    .green {
+      background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.12), transparent),
+        var(--green);
+    }
+
+    .green:hover {
+      background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.16), transparent),
+        var(--green-dark);
+    }
+
+    .blue {
+      background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.14), transparent),
+        var(--blue);
+    }
+
+    .blue:hover {
+      background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.18), transparent),
+        var(--blue-dark);
+    }
+
+    .red {
+      background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.14), transparent),
+        var(--red);
+    }
+
+    .red:hover {
+      background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.18), transparent),
+        var(--red-dark);
+    }
+
+    .danger-area {
+      margin-top: 18px;
+      padding-top: 18px;
+      border-top: 1px solid rgba(255, 255, 255, 0.18);
+    }
+
+    .footer {
+      margin-top: 24px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    @media (max-width: 720px) {
+      .container {
+        padding: 18px 10px;
+        align-items: flex-start;
+      }
+
+      .panel {
+        padding: 22px 14px;
+        border-radius: 22px;
+      }
+
+      .header {
+        margin-bottom: 20px;
+      }
+
+      .link-row,
+      .grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+
+      .button {
+        min-height: 64px;
+        padding: 14px 16px;
+        border-radius: 16px;
+        font-size: 0.98rem;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      .button {
+        transition: none;
+      }
+
+      .button:hover,
+      .button:active {
+        transform: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <script>
+    const openLink = (url) => window.open(url);
+  </script>
+
+  <div class="container">
+    <main class="panel">
+      <header class="header">
+        <span class="badge">My Useful Links</span>
+        <h1>Home</h1>
+        <p class="subtitle">
+          Quick access page for games, dhamma pages, satellite tools, receiver guides and other useful links.
+        </p>
+      </header>
+
+      <section class="featured">
+        <button
+          class="button blue"
+          onclick="openLink('https://www.mediafire.com/file/ran6ribrj8geg9g/Frontline_Command_D-Day_Mod_www.apkasw.com.apk/file')"
+        >
+          D-DAY Game Down
+        </button>
+      </section>
+
+      <section class="link-row">
+        <button class="button green" onclick="openLink('./dhamma_index.html')">
+          Dhammacakkappavattana
+        </button>
+
+        <button class="button green" onclick="openLink('https://www.thaistock2d.com/')">
+          2D / 3D Info
+        </button>
+      </section>
+
+      <section class="grid">
+        <button class="button green" onclick="openLink('http://scam.cronus.name/cgi/check')">
+          Check Scam Validity
+        </button>
+
+        <button class="button green" onclick="openLink('https://testious.com/')">
+          Check Cccam Active
+        </button>
+
+        <button class="button green" onclick="openLink('./strongtp.html')">
+          Check Strong TP
+        </button>
+
+        <button class="button green" onclick="openLink('https://www.satbeams.com/footprints')">
+          Check Sat Beams
+        </button>
+
+        <button class="button green" onclick="openLink('./usbupgrade.html')">
+          Usb Upgrade Solved
+        </button>
+
+        <button class="button green" onclick="openLink('./c_arrange.html')">
+          Hellobox Channel Arrange
+        </button>
+
+        <button class="button green" onclick="openLink('./remote-copy.html')">
+          Hellobox Remote Copy
+        </button>
+      </section>
+
+      <section class="danger-area">
+        <button class="button red" onclick="openLink('./porn.html')">
+          DARK ZOne (18+)
+        </button>
+      </section>
+
+      <p class="footer">
+        Designed for quick and clean navigation.
+      </p>
+    </main>
+  </div>
+</body>
+</html>
