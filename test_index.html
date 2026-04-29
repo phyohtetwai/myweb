@@ -6,236 +6,119 @@
   <title>Home</title>
 
   <style>
-    :root {
-      --text: #ffffff;
-      --muted: rgba(255, 255, 255, 0.78);
-      --card: rgba(255, 255, 255, 0.12);
-      --card-border: rgba(255, 255, 255, 0.22);
-      --shadow: rgba(0, 0, 0, 0.35);
-
-      --green: #16a34a;
-      --green-dark: #15803d;
-      --blue: #2563eb;
-      --blue-dark: #1d4ed8;
-      --red: #dc2626;
-      --red-dark: #b91c1c;
-    }
-
     * {
       box-sizing: border-box;
     }
 
-    html {
-      scroll-behavior: smooth;
-    }
-
     body {
       margin: 0;
-      padding: 0;
       min-height: 100vh;
-      font-family: "Segoe UI", Arial, sans-serif;
+      font-family: Arial, "Segoe UI", sans-serif;
       background:
-        linear-gradient(135deg, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.35)),
+        linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.75)),
         url("./img/bg.jpg") no-repeat center center fixed;
       background-size: cover;
-      color: var(--text);
+      color: #fff;
     }
 
     .container {
       min-height: 100vh;
-      padding: 32px 16px;
+      padding: 28px 14px;
       display: flex;
-      align-items: center;
       justify-content: center;
+      align-items: center;
     }
 
-    .panel {
+    .wrap {
       width: 100%;
-      max-width: 980px;
-      padding: 34px;
-      border: 1px solid var(--card-border);
-      border-radius: 28px;
-      background: rgba(0, 0, 0, 0.52);
-      box-shadow: 0 22px 60px var(--shadow);
-      backdrop-filter: blur(16px);
+      max-width: 520px;
     }
 
-    .header {
+    .site-title {
       text-align: center;
-      margin-bottom: 28px;
+      margin-bottom: 24px;
     }
 
-    .badge {
-      display: inline-block;
-      margin-bottom: 14px;
-      padding: 7px 16px;
-      border: 1px solid var(--card-border);
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.1);
-      color: var(--muted);
-      font-size: 0.88rem;
-      letter-spacing: 0.4px;
-    }
-
-    h1 {
+    .site-title h1 {
       margin: 0;
-      font-size: clamp(2rem, 5vw, 3.4rem);
-      line-height: 1.15;
-      letter-spacing: -0.04em;
+      font-size: 2rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
     }
 
-    .subtitle {
-      max-width: 620px;
-      margin: 14px auto 0;
-      color: var(--muted);
-      font-size: 1rem;
-      line-height: 1.7;
+    .site-title p {
+      margin: 8px 0 0;
+      color: rgba(255, 255, 255, 0.78);
+      font-size: 0.95rem;
     }
 
-    .featured {
-      margin-bottom: 18px;
-    }
-
-    .link-row {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 14px;
-      margin: 14px 0;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 14px;
-      margin-top: 14px;
+    .button-list {
+      display: flex;
+      flex-direction: column;
+      gap: 13px;
     }
 
     .button {
       width: 100%;
-      min-height: 72px;
-      padding: 16px 18px;
-      border: 1px solid transparent;
-      border-radius: 18px;
+      padding: 17px 20px;
+      border: none;
+      border-left: 6px solid rgba(255, 255, 255, 0.85);
+      border-radius: 10px;
       color: white;
-      font-size: 1.02rem;
+      font-size: 1.05rem;
       font-weight: 700;
-      line-height: 1.45;
+      text-align: left;
       cursor: pointer;
-      transition:
-        transform 0.2s ease,
-        box-shadow 0.2s ease,
-        background-color 0.2s ease,
-        border-color 0.2s ease;
-      backdrop-filter: blur(10px);
-      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.22);
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.28);
+      transition: 0.2s ease;
     }
 
     .button:hover {
-      transform: translateY(-3px);
-      border-color: rgba(255, 255, 255, 0.72);
-      box-shadow: 0 16px 30px rgba(0, 0, 0, 0.32);
+      transform: translateX(5px);
+      filter: brightness(1.12);
     }
 
     .button:active {
-      transform: translateY(0);
-      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.24);
-    }
-
-    .button:focus-visible {
-      outline: 3px solid rgba(255, 255, 255, 0.85);
-      outline-offset: 4px;
+      transform: scale(0.99);
     }
 
     .green {
-      background:
-        linear-gradient(135deg, rgba(255, 255, 255, 0.12), transparent),
-        var(--green);
-    }
-
-    .green:hover {
-      background:
-        linear-gradient(135deg, rgba(255, 255, 255, 0.16), transparent),
-        var(--green-dark);
+      background: #15803d;
     }
 
     .blue {
-      background:
-        linear-gradient(135deg, rgba(255, 255, 255, 0.14), transparent),
-        var(--blue);
-    }
-
-    .blue:hover {
-      background:
-        linear-gradient(135deg, rgba(255, 255, 255, 0.18), transparent),
-        var(--blue-dark);
+      background: #1d4ed8;
     }
 
     .red {
-      background:
-        linear-gradient(135deg, rgba(255, 255, 255, 0.14), transparent),
-        var(--red);
+      background: #b91c1c;
     }
 
-    .red:hover {
-      background:
-        linear-gradient(135deg, rgba(255, 255, 255, 0.18), transparent),
-        var(--red-dark);
-    }
-
-    .danger-area {
-      margin-top: 18px;
-      padding-top: 18px;
-      border-top: 1px solid rgba(255, 255, 255, 0.18);
+    .red {
+      margin-top: 8px;
+      border-left-color: #ffd1d1;
     }
 
     .footer {
-      margin-top: 24px;
+      margin-top: 22px;
       text-align: center;
-      color: var(--muted);
-      font-size: 0.88rem;
+      color: rgba(255, 255, 255, 0.65);
+      font-size: 0.85rem;
     }
 
-    @media (max-width: 720px) {
+    @media (max-width: 600px) {
       .container {
-        padding: 18px 10px;
         align-items: flex-start;
+        padding-top: 24px;
       }
 
-      .panel {
-        padding: 22px 14px;
-        border-radius: 22px;
-      }
-
-      .header {
-        margin-bottom: 20px;
-      }
-
-      .link-row,
-      .grid {
-        grid-template-columns: 1fr;
-        gap: 12px;
+      .site-title h1 {
+        font-size: 1.65rem;
       }
 
       .button {
-        min-height: 64px;
-        padding: 14px 16px;
-        border-radius: 16px;
-        font-size: 0.98rem;
-      }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      html {
-        scroll-behavior: auto;
-      }
-
-      .button {
-        transition: none;
-      }
-
-      .button:hover,
-      .button:active {
-        transform: none;
+        padding: 15px 16px;
+        font-size: 1rem;
       }
     }
   </style>
@@ -247,25 +130,17 @@
   </script>
 
   <div class="container">
-    <main class="panel">
-      <header class="header">
-        <span class="badge">My Useful Links</span>
+    <div class="wrap">
+      <div class="site-title">
         <h1>Home</h1>
-        <p class="subtitle">
-          Quick access page for games, dhamma pages, satellite tools, receiver guides and other useful links.
-        </p>
-      </header>
+        <p>Quick links and useful tools</p>
+      </div>
 
-      <section class="featured">
-        <button
-          class="button blue"
-          onclick="openLink('https://www.mediafire.com/file/ran6ribrj8geg9g/Frontline_Command_D-Day_Mod_www.apkasw.com.apk/file')"
-        >
+      <div class="button-list">
+        <button class="button blue" onclick="openLink('https://www.mediafire.com/file/ran6ribrj8geg9g/Frontline_Command_D-Day_Mod_www.apkasw.com.apk/file')">
           D-DAY Game Down
         </button>
-      </section>
 
-      <section class="link-row">
         <button class="button green" onclick="openLink('./dhamma_index.html')">
           Dhammacakkappavattana
         </button>
@@ -273,9 +148,7 @@
         <button class="button green" onclick="openLink('https://www.thaistock2d.com/')">
           2D / 3D Info
         </button>
-      </section>
 
-      <section class="grid">
         <button class="button green" onclick="openLink('http://scam.cronus.name/cgi/check')">
           Check Scam Validity
         </button>
@@ -303,18 +176,16 @@
         <button class="button green" onclick="openLink('./remote-copy.html')">
           Hellobox Remote Copy
         </button>
-      </section>
 
-      <section class="danger-area">
         <button class="button red" onclick="openLink('./porn.html')">
           DARK ZOne (18+)
         </button>
-      </section>
+      </div>
 
-      <p class="footer">
-        Designed for quick and clean navigation.
-      </p>
-    </main>
+      <div class="footer">
+        Personal navigation page
+      </div>
+    </div>
   </div>
 </body>
 </html>
