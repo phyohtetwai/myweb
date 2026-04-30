@@ -1,95 +1,93 @@
 <!DOCTYPE html>
 <html lang="my">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>သမိုင်းဝင် တော်ကီများ စုစည်းမှု</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
 
   <style>
-    * {
-      box-sizing: border-box;
-    }
-
     body {
       margin: 0;
-      font-family: "Ubuntu", "Myanmar Text", "Noto Sans Myanmar", sans-serif;
-      background:
-        radial-gradient(circle at top, rgba(255, 215, 128, 0.12), transparent 35%),
-        linear-gradient(135deg, #0d0d0f, #19130f 55%, #080808);
-      color: #f7ead7;
-      line-height: 1.8;
+      font-family: "Ubuntu", "Myanmar Text", sans-serif;
+      background: #111;
+      color: #eee;
     }
 
-    .wrapper {
-      max-width: 980px;
+    .page {
+      max-width: 900px;
       margin: auto;
-      padding: 40px 18px;
+      padding: 25px 15px;
     }
 
-    .hero {
+    .title-box {
       text-align: center;
-      margin-bottom: 38px;
+      padding: 35px 20px;
+      margin-bottom: 25px;
+      border-radius: 22px;
+      background: linear-gradient(135deg, #2b1b12, #111);
+      border: 1px solid #5c3b22;
     }
 
-    .hero h1 {
+    h1 {
       margin: 0;
-      font-size: clamp(26px, 5vw, 44px);
-      color: #ffd48a;
-      letter-spacing: 1px;
+      color: #ffcc7a;
+      font-size: 30px;
+      line-height: 1.5;
     }
 
-    .hero p {
-      color: #c7b79e;
-      margin-top: 10px;
-      font-size: 15px;
+    .subtitle {
+      color: #bfa98c;
+      margin-top: 8px;
     }
 
-    .quote-card {
-      background: rgba(255, 255, 255, 0.055);
-      border: 1px solid rgba(255, 212, 138, 0.2);
-      border-radius: 20px;
-      padding: 24px;
-      margin-bottom: 24px;
-      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
-      backdrop-filter: blur(10px);
+    .card {
+      background: #1b1b1b;
+      border: 1px solid #333;
+      border-radius: 18px;
+      padding: 22px;
+      margin-bottom: 22px;
+      box-shadow: 0 10px 25px rgba(0,0,0,.35);
     }
 
-    .quote {
+    .dialogue {
       white-space: pre-line;
       font-size: 17px;
-      color: #fff4df;
+      line-height: 2;
+      color: #f5f5f5;
     }
 
-    .name {
-      display: block;
-      margin-top: 14px;
-      color: #ffd48a;
-      font-weight: 700;
+    .speaker {
+      margin-top: 12px;
       text-align: right;
+      color: #ffcc7a;
+      font-weight: 700;
     }
 
     .reply {
-      margin-top: 22px;
+      margin-top: 20px;
       padding-top: 18px;
-      border-top: 1px dashed rgba(255, 212, 138, 0.28);
+      border-top: 1px dashed #555;
     }
 
     footer {
       text-align: center;
-      color: #9c8f7d;
-      margin-top: 40px;
-      font-size: 13px;
+      color: #888;
+      padding: 30px 0;
+      font-size: 14px;
     }
 
     @media (max-width: 600px) {
-      .quote-card {
-        padding: 18px;
-        border-radius: 16px;
+      h1 {
+        font-size: 24px;
       }
 
-      .quote {
+      .card {
+        padding: 18px;
+      }
+
+      .dialogue {
         font-size: 15.5px;
       }
     }
@@ -97,146 +95,209 @@
 </head>
 
 <body>
-  <main class="wrapper">
-    <section class="hero">
-      <h1>ဟိုး..ရှေးရှေးတုန်းက သမိုင်းဝင် တော်ကီများ စုစည်းမှု</h1>
-      <p>Classic parody dialogue collection</p>
-    </section>
+  <div class="page">
 
-    <section class="quote-card">
-      <div class="quote">ငါ မရှိတော့ရင် ငါ့မိဖုရားကို
+    <div class="title-box">
+      <h1>ဟိုး..ရှေးရှေးတုန်းက<br>သမိုင်းဝင် တော်ကီများ စုစည်းမှု</h1>
+      <div class="subtitle">Reading Collection</div>
+    </div>
+
+    <div id="content"></div>
+
+    <footer>© သမိုင်းဝင် တော်ကီများ စုစည်းမှု</footer>
+  </div>
+
+  <script>
+    const talks = [
+      [
+`ငါ မရှိတော့ရင် ငါ့မိဖုရားကို
 သူ သိမ်းပိုက်တော့မှာ ငါ.. စိတ်မချဘူး
-ဟဲ့.. ငယ်ကျွန် စောဥမ္မာကို သွားသတ်ချေ</div>
-      <span class="name">( သတိုးမင်းဖျား )</span>
-
-      <div class="reply">
-        <div class="quote">မောင်တော်ရယ်..
+ဟဲ့.. ငယ်ကျွန် စောဥမ္မာကို သွားသတ်ချေ`,
+`သတိုးမင်းဖျား`,
+`မောင်တော်ရယ်..
 ကိုယ်လည်း ခဏတဖြုတ်ပဲ တတ်နိုင်တာကို
 ကိုယ်မကုန်တာ သူများ.. စားပါစေလား..
-ကုသိုလ်တောင် ရသေး</div>
-        <span class="name">( စောဥမ္မာ )</span>
-      </div>
-    </section>
-
-    <section class="quote-card">
-      <div class="quote">ခုနစ်ပြည်ထောင်ကို စစ်မက်ခေါ်ရတာ
+ကုသိုလ်တောင် ရသေး`,
+`စောဥမ္မာ`
+      ],
+      [
+`ခုနစ်ပြည်ထောင်ကို စစ်မက်ခေါ်ရတာ
 သူတို့တိုင်းပြည်ကို မက်လို့မဟုတ်ဘူး
-ပပကြောင့်</div>
-      <span class="name">( မင်းကုသ )</span>
-
-      <div class="reply">
-        <div class="quote">တစ်ကောင်မဟုတ် တစ်ကောင်ရမှာပါ
+ပပကြောင့်`,
+`မင်းကုသ`,
+`တစ်ကောင်မဟုတ် တစ်ကောင်ရမှာပါ
 အရေးမကြီးပါဘူး..
 ဘယ်ကောင်နဲ့ရရ မိဖုရားပါပဲ
 တစ်ကောင်ကို တစ်ကောင်သတ်ကြရင်း
 နောက်ဆုံး..
-နှာဗူးခြောက်ကောင် လျော့သွားတာပေါ့</div>
-        <span class="name">( ပပဝတီ )</span>
-      </div>
-    </section>
-
-    <section class="quote-card">
-      <div class="quote">အချစ်ရေးမှာ အသက်ကွာတာ
-အဓိက မဟုတ်ပါဘူး ဓာတုကလျာ</div>
-      <span class="name">( နတ်ရှင်နောင် )</span>
-
-      <div class="reply">
-        <div class="quote">အသက်ငယ်တော့ ပိုအားသုံးနိုင်တာပေါ့ကွယ်
+နှာဗူးခြောက်ကောင် လျော့သွားတာပေါ့`,
+`ပပဝတီ`
+      ],
+      [
+`အချစ်ရေးမှာ အသက်ကွာတာ
+အဓိက မဟုတ်ပါဘူး ဓာတုကလျာ`,
+`နတ်ရှင်နောင်`,
+`အသက်ငယ်တော့ ပိုအားသုံးနိုင်တာပေါ့ကွယ်
 ဖွင့်မမီတောင် ပိတ်ပွဲမီရမယ်ဆိုတဲ့
-ငါ့မောင်စိတ်ဓာတ်တော့ ကြိုက်တယ်.. သက်လား</div>
-        <span class="name">( ဓာတုကလျာ )</span>
-      </div>
-    </section>
-
-    <section class="quote-card">
-      <div class="quote">ဓား၊ လှံ၊ သံလျက် ဘယ်လက်နက်နဲ့မှ မသေလိုပါ
-အရှင်မင်းကြီး၏ စောဥမ္မာသာ လိုပါသည်</div>
-      <span class="name">( ငတက်ပြား )</span>
-
-      <div class="reply">
-        <div class="quote">ငတက်ပြားဆိုတဲ့ကောင်
-အနံ့နဲ့တင် သေသွားစေရမယ် မောင်တော်</div>
-        <span class="name">( စောဥမ္မာ )</span>
-      </div>
-    </section>
-
-    <section class="quote-card">
-      <div class="quote">မအိုဇာကို ပြောပေးပါ
-ကွမ်းတရာ ရေတစ်မှုတ်နဲ့ နှုတ်ဆက်ပေးပါလို့</div>
-      <span class="name">( ဗျတ်ဝိ )</span>
-
-      <div class="reply">
-        <div class="quote">မသာ..
-လူကို ကွမ်းယာသည်များ မှတ်နေလား</div>
-        <span class="name">( မအိုဇာ )</span>
-      </div>
-    </section>
-
-    <section class="quote-card">
-      <div class="quote">မွှေးနွန်းရယ်.. မောင်တော် ဘုန်းကံနိမ့်ရင်
+ငါ့မောင်စိတ်ဓာတ်တော့ ကြိုက်တယ်.. သက်လား`,
+`ဓာတုကလျာ`
+      ],
+      [
+`ဓား၊ လှံ၊ သံလျက် ဘယ်လက်နက်နဲ့မှ မသေလိုပါ
+အရှင်မင်းကြီး၏ စောဥမ္မာသာ လိုပါသည်`,
+`ငတက်ပြား`,
+`ငတက်ပြားဆိုတဲ့ကောင်
+အနံ့နဲ့တင် သေသွားစေရမယ် မောင်တော်`,
+`စောဥမ္မာ`
+      ],
+      [
+`မအိုဇာကို ပြောပေးပါ
+ကွမ်းတရာ ရေတစ်မှုတ်နဲ့ နှုတ်ဆက်ပေးပါလို့`,
+`ဗျတ်ဝိ`,
+`မသာ..
+လူကို ကွမ်းယာသည်များ မှတ်နေလား`,
+`မအိုဇာ`
+      ],
+      [
+`မွှေးနွန်းရယ်.. မောင်တော် ဘုန်းကံနိမ့်ရင် 
 အသက်အန္တရာယ် ရှိပေမယ့်
 မောင်တော်ရဲ့ ဘုန်းကံထက်
-မွှေးနွန်းကို တန်ဖိုးထားပါတယ်</div>
-      <span class="name">( မင်းနန္ဒာ )</span>
-
-      <div class="reply">
-        <div class="quote">မောင်တော်ရယ်.. ထဘီလျှော်ရုံနဲ့
-ဘုန်းကံ နိမ်းကြေးလား.. ဟတ်. ဟတ်</div>
-        <span class="name">( မွေးနွန်း )</span>
-      </div>
-    </section>
-
-    <section class="quote-card">
-      <div class="quote">သားတော် အမိန့်ကို နာခံခဲ့ပေမယ့်
+မွှေးနွန်းကို တန်ဖိုးထားပါတယ်`,
+`မင်းနန္ဒာ`,
+`မောင်တော်ရယ်.. ထဘီလျှော်ရုံနဲ့
+ဘုန်းကံ နိမ်းကြေးလား.. ဟတ်. ဟတ်`,
+`မွေးနွန်း`
+      ],
+      [
+`သားတော် အမိန့်ကို နာခံခဲ့ပေမယ့်
 သားတော်ရဲ့ နှလုံးသားက ခမည်းတော်အမိန့်ကို
-နာခံဖို့ ငြင်းဆန်ခဲ့ပါတယ်</div>
-      <span class="name">( ကျန်စစ်သား )</span>
-
-      <div class="reply">
-        <div class="quote">ငါ့စော်ကို ကျော်တဲ့ မသာကများ.. လိ့</div>
-        <span class="name">( အနော်ရထာ )</span>
-      </div>
-    </section>
-
-    <section class="quote-card">
-      <div class="quote">သိပ်ချစ်တက်တဲ့ ကျွန်တော့်နှလုံးသားကို
+နာခံဖို့ ငြင်းဆန်ခဲ့ပါတယ်`,
+`ကျန်စစ်သား`,
+`ငါ့စော်ကို ကျော်တဲ့ မသာကများ.. လိ့`,
+`အနော်ရထာ`
+      ],
+      [
+`သိပ်ချစ်တက်တဲ့ ကျွန်တော့်နှလုံးသားကို
 သံကွန်ချာ ခုနစ်ထပ်အုပ်ပြီး အမိန့်ပေးလို့မရဘူး
-ဆရာတွတ်</div>
-      <span class="name">( ဗိုက်ကလေး )</span>
-
-      <div class="reply">
-        <div class="quote">မိန်းမ ရမှ မှားမယ်မှန်း သိမယ် တပည့်ကြီး</div>
-        <span class="name">( ဆရာတွတ် )</span>
-      </div>
-    </section>
-
-    <section class="quote-card">
-      <div class="quote">မင်းမရှိတဲ့ ဘဝမှာ ငါတစ်ယောက်တည်းများ
-ရှင်သန်နေမယ်ထင်လား</div>
-      <span class="name">( ရိုမီယို )</span>
-
-      <div class="reply">
-        <div class="quote">မွှန်နေတယ်ပေါ့ ဟတ်.. ဟတ်</div>
-        <span class="name">( ဂျူးလိယက် )</span>
-      </div>
-    </section>
-
-    <section class="quote-card">
-      <div class="quote">စုစုရယ် ခုနစ်နှစ် ခုနစ်မိုးက
-မနေ့တနေ့ကလို ပါပဲလား</div>
-      <span class="name">( သီပေါမင်း )</span>
-
-      <div class="reply">
-        <div class="quote">ခဏတဖြုတ်ကိုး..
+ဆရာတွတ်`,
+`ဗိုက်ကလေး`,
+`မိန်းမ ရမှ မှားမယ်မှန်း သိမယ် တပည့်ကြီး`,
+`ဆရာတွတ်`
+      ],
+      [
+`မင်းမရှိတဲ့ ဘဝမှာ ငါတစ်ယောက်တည်းများ
+ရှင်သန်နေမယ်ထင်လား`,
+`ရိုမီယို`,
+`မွှန်နေတယ်ပေါ့ ဟတ်.. ဟတ်`,
+`ဂျူးလိယက်`
+      ],
+      [
+`စုစုရယ် ခုနစ်နှစ် ခုနစ်မိုးက
+မနေ့တနေ့ကလို ပါပဲလား`,
+`သီပေါမင်း`,
+`ခဏတဖြုတ်ကိုး..
 ဒါတောင် ဟိုကောင်မ ဒိုင်းခင်ခင်နဲ့
-နန့်ကြောဆွဲသေး</div>
-        <span class="name">( စုဖုရားလတ် )</span>
-      </div>
-    </section>
+နန့်ကြောဆွဲသေး`,
+`စုဖုရားလတ်`
+      ],
+      [
+`မင်းဆီကို လာမယ့်လမ်းမှာ 
+ဓားနဲ့စောင့်နေမယ် ဟုတ်လား..
+အသခံပြီး လာမှာပါ`,
+`ကျော်စိုး < ပီမိုးနင်း၏သား >`,
+`မီးပိတ်ထားရင် အားလုံး အတူတူပါပဲ ငါ့သားရာ`,
+`ပီမိုးနင်း < ကျော်စိုး၏ဖခင် >`
+      ],
+      [
+`စစ်လက်နက် ချပ်ဝတ်တန်ဆာတွေနဲ့
+ပြည့်နေတဲ့ ဟောဒီ ဝတ်ရုံအောက်မှာ
+မင်းကိုချစ်တဲ့ နှလုံးသားတစ်စုံ ရှိတယ်ဆိုတာ
+မင်းသိထားပါ သီတာဒေဝီ`,
+`ဒသဂီရိ`,
+`ကျွန်မတို့ကတော့ အလှထိုင်ကြည့်နေတဲ့သူထက်
+လက်ရဲဇက်ရဲမှ သဘောကျတာရှင့်
+နောက်ကျရင်တော့ အပေါက်ဝကပဲ ဟွင်း.. ဟွင်း`,
+`သီတာဒေဝီ`
+      ],
+      [
+`မမြဝင်းရယ်.. လှေနံနှစ်ဖက် နင်းမယ်ဆိုလည်း
+ကျုပ်ဘက်ကိုသာ ပိုပိုသာသာလေး နင်းလိုက်ပါ`,
+`ဗိုလ်အောင်ဒင်`,
+`ကျော်ချင် ခွချင်ရင်မှဖြင့် ဆိုက်ကားနင်းတာ 
+ကြာလှပြီပေါ့ အစ်ကိုကြီးရယ် ညှင်း.. ညှင်း`,
+`မမြဝင်း`
+      ],
+      [
+`ချစ်ခြင်းအတွက် သေခြင်းကို ရင်ဆိုင်မယ်ပေါ့
+မအံ့သွပါဘူး..
+အရှင့်သားကို ချစ်မိကတည်းက 
+ခင့်နှလုံးသားရော၊ ဘဝတစ်ခုလုံးပါ
+သေဆုံးခဲ့ပြီးသားပါ`,
+`ဒိုင်းခင်ခင်`,
+`အစ်ကိုကြီးက ညီမလေးကို
+အတည်ယူမှာပါကွ ဟဲ ဟဲ ဟဲ ဟဲ`,
+`သီပေါမင်း`
+      ],
+      [
+`သွားပေဦးတော့ စောမွန်လှရေ..
+မင်းမဖြစ်နိုင်တဲ့ ဘုရင်းတစ်ပါးရဲ့ အချစ်တွေနဲ့
+မျက်ရည်တွေကို ဟော.. ဟိုက မပြီးသေးတဲ့
+ရွှေစည်းခုံစေတီ သက်သေတည်ပြီး
+ဆုတောင်းချင်ပါရဲ့ နောင်ဘဝဆိုတာ ရှိခဲ့ရင်ပေါ့`,
+`အနော်ရထာ`,
+`တခြားမိဖုရားတွေနဲ့ ခဏနေရင် ဒချိတော့မှာများ
+စောင်ပိုဒေ သိပ်ပြောတာပဲ`,
+`စောမွန်လှ`
+      ],
+      [
+`သေစေနိုင်တဲ့ အဆိပ်တွေပါမှန်း သိသိကြီးနဲ့
+ကျုပ်မရှောင်နိုင်ခဲ့တာ မင့်နှုတ်ခမ်းတွေပါပဲ
+ရွှေအိမ်စည်ရယ်..`,
+`ပဋိက္ခရာမင်းသား`,
+`သောက်ငတ်ကြမ်းတာကျ ထည့်မပြောဘူး`,
+`ရွှေအိမ်စည်`
+      ],
+      [
+`မင်းပုံရိပ်လေး မြင်ကတည်းက စွဲလမ်းခဲ့ရတာပါ
+မင်း.. လင်ဘယ်နှစ်ယောက်ရဲ့ မယားဖြစ်နေနေ
+ငါ.. ဂရုမစိုက်ဘူး 
+ငါလိုချင်တာ မင်းရဲ့အချစ်ပါ
+မင်းနှလုံးသားကိုရဖို့ အရူးတစ်ယောက်လို
+ငါ ကြိုးစားခဲ့တာ.. 
+ငါ့ဆွေမျိုးတွေ အကုန်သေ
+ငါ့တိုင်းပြည်ကြီး မီးဟုန်းဟုန်း တောက်လောင်
+ခံနေရတာတွေက သက်သေတွေပါ သီတာရယ်`,
+`ဒသဂီရိ`,
+`ရတုန်းကတော့ ဘာမှ မဘာပဲနဲ့
+အကုန် သေကုန်၊ ပြာကျကုန်မှ ချစ်သလေး
+ဘာလေးနဲ့.. နဲနဲပါးပါး ဘာခဲ့ရင်တောင်
+ပြန်ချစ်လို့ရသေး အခုတော့.. ခိ ခိ`,
+`သီတာဒေဝီ`
+      ],
+      [
+`ဖျားသွားမယ်လို့ ပြောခဲ့တယ်နော်`,
+`ကျန်းမာရေးဝန်ကြီး`,
+`မွန်ထွာ.. 
+ဖျားရုံတင်မကဘူး ဝေဘာဂီတောင် ရောက်သွားပြီ`,
+`ဒေးဗစ်လား`
+      ]
+    ];
 
-    <footer>
-      © သမိုင်းဝင် တော်ကီများ စုစည်းမှု
-    </footer>
-  </main>
+    const content = document.getElementById("content");
+
+    talks.forEach(item => {
+      content.innerHTML += `
+        <section class="card">
+          <div class="dialogue">${item[0]}</div>
+          <div class="speaker">( ${item[1]} )</div>
+
+          <div class="reply">
+            <div class="dialogue">${item[2]}</div>
+            <div class="speaker">( ${item[3]} )</div>
+          </div>
+        </section>
+      `;
+    });
+  </script>
 </body>
 </html>
