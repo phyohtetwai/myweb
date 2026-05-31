@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ပရိတ်ကြီး ၁၁ သုတ် | ပါဠိနှင့် မြန်မာအနက်</title>
+
+  <style>
+    :root {
+      --bg: #fffaf0;
+      --card: #ffffff;
+      --text: #2b2118;
+      --muted: #75685c;
+      --primary: #9a6b24;
+      --border: #eadcc7;
+      --soft: #f7eddc;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Myanmar Text", "Noto Sans Myanmar", "Padauk", system-ui, sans-serif;
+      line-height: 1.85;
+    }
+
+    .container {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 28px 18px 60px;
+    }
+
+    header {
+      text-align: center;
+      padding: 42px 18px;
+      background: linear-gradient(135deg, #fff3d9, #ffffff);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      margin-bottom: 26px;
+    }
+
+    header h1 {
+      margin: 0 0 10px;
+      font-size: clamp(1.7rem, 4vw, 2.8rem);
+      color: var(--primary);
+    }
+
+    header p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1rem;
+    }
+
+    .note {
+      background: var(--soft);
+      border-left: 5px solid var(--primary);
+      padding: 16px 18px;
+      border-radius: 14px;
+      margin-bottom: 24px;
+      color: #4a3927;
+    }
+
+    .toc {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 10px;
+      margin: 24px 0;
+    }
+
+    .toc a {
+      display: block;
+      text-decoration: none;
+      color: var(--text);
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 12px 14px;
+      transition: 0.2s ease;
+    }
+
+    .toc a:hover {
+      transform: translateY(-2px);
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+
+    section.sutta {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      padding: 24px;
+      margin: 24px 0;
+      box-shadow: 0 10px 28px rgba(83, 57, 28, 0.06);
+    }
+
+    .sutta h2 {
+      margin: 0 0 8px;
+      color: var(--primary);
+      font-size: 1.6rem;
+    }
+
+    .subtitle {
+      color: var(--muted);
+      margin-bottom: 18px;
+    }
+
+    .block {
+      margin: 18px 0;
+      padding: 18px;
+      border-radius: 18px;
+      border: 1px solid var(--border);
+      background: #fffdf8;
+    }
+
+    .block h3 {
+      margin-top: 0;
+      color: #6f4b16;
+      font-size: 1.15rem;
+    }
+
+    .pali {
+      font-family: "Times New Roman", serif;
+      font-size: 1.08rem;
+      color: #1f1a14;
+      white-space: pre-line;
+    }
+
+    .meaning {
+      white-space: pre-line;
+    }
+
+    .verse {
+      margin-bottom: 18px;
+      padding-bottom: 14px;
+      border-bottom: 1px dashed var(--border);
+    }
+
+    .verse:last-child {
+      border-bottom: 0;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .status {
+      display: inline-block;
+      font-size: 0.85rem;
+      color: #fff;
+      background: var(--primary);
+      padding: 4px 10px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+
+    footer {
+      text-align: center;
+      color: var(--muted);
+      margin-top: 36px;
+      font-size: 0.92rem;
+    }
+  </style>
+</head>
+
+<body>
+  <main class="container">
+    <header>
+      <h1>ပရိတ်ကြီး ၁၁ သုတ်</h1>
+      <p>ပါဠိစာသားနှင့် မြန်မာအနက် — Blog ဖတ်ရှုရန် စီစဉ်ထားသော မူ</p>
+    </header>
+
+    <div class="note">
+      <strong>မှတ်ချက်။</strong>
+      ပါဠိစာသားများသည် မူရင်းကျမ်းစာမူများနှင့် တိုက်ဆိုင်စစ်ဆေးရန် လိုအပ်သည်။
+      မြန်မာအနက်များသည် စာအုပ်တစ်အုပ်မှ တိုက်ရိုက်ကူးယူထားခြင်း မဟုတ်ဘဲ
+      blog ဖတ်ရှုသူနားလည်လွယ်စေရန် ကိုယ်ပိုင်အနက်ဖော်ပြချက်အဖြစ် ရေးသားထားသည်။
+    </div>
+
+    <nav class="toc">
+      <a href="#mangala">၁။ မင်္ဂလသုတ်</a>
+      <a href="#ratana">၂။ ရတနသုတ်</a>
+      <a href="#metta">၃။ မေတ္တသုတ်</a>
+      <a href="#khandha">၄။ ခန္ဓသုတ်</a>
+      <a href="#mora">၅။ မောရသုတ်</a>
+      <a href="#vatta">၆။ ဝဋ္ဋသုတ်</a>
+      <a href="#dhajagga">၇။ ဓဇဂ္ဂသုတ်</a>
+      <a href="#atanatiya">၈။ အာဋာနာဋိယသုတ်</a>
+      <a href="#angulimala">၉။ အင်္ဂုလိမာလသုတ်</a>
+      <a href="#bojjhanga">၁၀။ ဗောဇ္ဈင်္ဂသုတ်</a>
+      <a href="#pubbanha">၁၁။ ပုဗ္ဗဏှသုတ်</a>
+    </nav>
+
+    <section class="sutta" id="mangala">
+      <span class="status">စိစစ်ပြီး ထည့်သွင်းထားသည်</span>
+      <h2>၁။ မင်္ဂလသုတ်</h2>
+      <div class="subtitle">Maṅgala Sutta — မင်္ဂလာအကြောင်း ဟောကြားထားသော သုတ်တော်</div>
+
+      <div class="block">
+        <h3>ပါဠိ</h3>
+        <div class="pali">Evaṃ me sutaṃ—
+Ekaṃ samayaṃ Bhagavā Sāvatthiyaṃ viharati Jetavane Anāthapiṇḍikassa ārāme.
+
+Atha kho aññatarā devatā abhikkantāya rattiyā abhikkantavaṇṇā kevalakappaṃ Jetavanaṃ obhāsetvā yena Bhagavā tenupasaṅkami; upasaṅkamitvā Bhagavantaṃ abhivādetvā ekamantaṃ aṭṭhāsi. Ekamantaṃ ṭhitā kho sā devatā Bhagavantaṃ gāthāya ajjhabhāsi—
+
+Bahū devā manussā ca,
+maṅgalāni acintayuṃ;
+Ākaṅkhamānā sotthānaṃ,
+brūhi maṅgalamuttamaṃ.
+
+Asevanā ca bālānaṃ,
+paṇḍitānañca sevanā;
+Pūjā ca pūjanīyānaṃ,
+etaṃ maṅgalamuttamaṃ.
+
+Patirūpadesavāso ca,
+pubbe ca katapuññatā;
+Attasammāpaṇidhi ca,
+etaṃ maṅgalamuttamaṃ.
+
+Bāhusaccañca sippañca,
+vinayo ca susikkhito;
+Subhāsitā ca yā vācā,
+etaṃ maṅgalamuttamaṃ.
+
+Mātāpitu upaṭṭhānaṃ,
+puttadārassa saṅgaho;
+Anākulā ca kammantā,
+etaṃ maṅgalamuttamaṃ.
+
+Dānañca dhammacariyā ca,
+ñātakānañca saṅgaho;
+Anavajjāni kammāni,
+etaṃ maṅgalamuttamaṃ.
+
+Āratī viratī pāpā,
+majjapānā ca saṃyamo;
+Appamādo ca dhammesu,
+etaṃ maṅgalamuttamaṃ.
+
+Gāravo ca nivāto ca,
+santuṭṭhi ca kataññutā;
+Kālena dhammassavanaṃ,
+etaṃ maṅgalamuttamaṃ.
+
+Khantī ca sovacassatā,
+samaṇānañca dassanaṃ;
+Kālena dhammasākacchā,
+etaṃ maṅgalamuttamaṃ.
+
+Tapo ca brahmacariyañca,
+ariyasaccāna dassanaṃ;
+Nibbānasacchikiriyā ca,
+etaṃ maṅgalamuttamaṃ.
+
+Phuṭṭhassa lokadhammehi,
+cittaṃ yassa na kampati;
+Asokaṃ virajaṃ khemaṃ,
+etaṃ maṅgalamuttamaṃ.
+
+Etādisāni katvāna,
+sabbatthamaparājitā;
+Sabbattha sotthiṃ gacchanti,
+taṃ tesaṃ maṅgalamuttamanti.</div>
+      </div>
+
+      <div class="block">
+        <h3>မြန်မာအနက်</h3>
+        <div class="meaning">
+          <div class="verse">
+            <strong>ဤသို့ ကျွန်ုပ်ကြားနာခဲ့ရပါသည်။</strong>
+            တစ်ချိန်က ဘုရားရှင်သည် သာဝတ္ထိပြည်၊ ဇေတဝန်ကျောင်း၊ အနာထပိဏ္ဍိကသူဌေး၏ အာရာမ်တွင် သီတင်းသုံးတော်မူနေတော်မူသည်။
+          </div>
+
+          <div class="verse">
+            ထိုအချိန်တွင် ညဉ့်အခါ၌ အရောင်အဝါထွန်းလင်းသော နတ်တစ်ပါးသည် ဇေတဝန်ကျောင်းတော်တစ်ခုလုံးကို အလင်းပြပြီး ဘုရားရှင်ထံ ချဉ်းကပ်လာသည်။ ဘုရားရှင်အား ဦးချကာ တစ်ဖက်၌ ရပ်နေပြီး ဂါထာဖြင့် လျှောက်ထားသည်။
+          </div>
+
+          <div class="verse">
+            <strong>၁။</strong>
+            နတ်များနှင့် လူများစွာတို့သည် ဘေးကင်းချမ်းသာမှုကို မျှော်လင့်ကြ၍ မင်္ဂလာအရာများကို စဉ်းစားကြသည်။
+            အရှင်ဘုရား၊ အမြင့်မြတ်ဆုံးသော မင်္ဂလာကို ဟောကြားတော်မူပါ။
+          </div>
+
+          <div class="verse">
+            <strong>၂။</strong>
+            မိုက်မဲသူတို့နှင့် မပေါင်းသင်းခြင်း၊ ပညာရှိသူတို့နှင့် ပေါင်းသင်းခြင်း၊ ပူဇော်ထိုက်သူတို့ကို ပူဇော်ခြင်းသည် အမြင့်မြတ်ဆုံးသော မင်္ဂလာဖြစ်သည်။
+          </div>
+
+          <div class="verse">
+            <strong>၃။</strong>
+            သင့်လျော်ကောင်းမွန်သော အရပ်ဒေသ၌ နေထိုင်ခြင်း၊ ယခင်က ကုသိုလ်ကောင်းမှုများ ပြုလုပ်ခဲ့ခြင်း၊ မိမိကိုယ်ကို မှန်ကန်စွာ တည်ဆောက်ထားခြင်းသည် အမြင့်မြတ်ဆုံးသော မင်္ဂလာဖြစ်သည်။
+          </div>
+
+          <div class="verse">
+            <strong>၄။</strong>
+            အကြားအမြင်ဗဟုသုတများခြင်း၊ အသက်မွေးဝမ်းကျောင်းပညာတတ်ခြင်း၊ စည်းကမ်းသိက္ခာကို ကောင်းစွာသင်ယူထားခြင်း၊ ကောင်းမွန်စွာ ပြောဆိုတတ်ခြင်းသည် အမြင့်မြတ်ဆုံးသော မင်္ဂလာဖြစ်သည်။
+          </div>
+
+          <div class="verse">
+            <strong>၅။</strong>
+            မိဘနှစ်ပါးကို ပြုစုစောင့်ရှောက်ခြင်း၊ သားသမီးနှင့် ဇနီး/ခင်ပွန်းကို စောင့်ရှောက်ထောက်ပံ့ခြင်း၊ အလုပ်အကိုင်များကို ရှုပ်ထွေးမနေစေဘဲ သန့်ရှင်းစွာ ဆောင်ရွက်ခြင်းသည် အမြင့်မြတ်ဆုံးသော မင်္ဂလာဖြစ်သည်။
+          </div>
+
+          <div class="verse">
+            <strong>၆။</strong>
+            ပေးကမ်းလှူဒါန်းခြင်း၊ တရားနှင့်အညီ ကျင့်ကြံခြင်း၊ ဆွေမျိုးတို့ကို စောင့်ရှောက်ထောက်ပံ့ခြင်း၊ အပြစ်ကင်းသော အလုပ်များကို ပြုလုပ်ခြင်းသည် အမြင့်မြတ်ဆုံးသော မင်္ဂလာဖြစ်သည်။
+          </div>
+
+          <div class="verse">
+            <strong>၇။</strong>
+            မကောင်းမှုမှ ရှောင်ကြဉ်ခြင်း၊ မကောင်းမှုကို လုံးဝမပြုခြင်း၊ မူးယစ်စေသော အရက်သေစာမှ ထိန်းချုပ်ခြင်း၊ ကုသိုလ်တရားများ၌ မမေ့မလျော့ သတိရှိခြင်းသည် အမြင့်မြတ်ဆုံးသော မင်္ဂလာဖြစ်သည်။
+          </div>
+
+          <div class="verse">
+            <strong>၈။</strong>
+            ရိုသေလေးစားခြင်း၊ နှိမ့်ချတတ်ခြင်း၊ ရရှိသမျှဖြင့် ရောင့်ရဲတတ်ခြင်း၊ ကျေးဇူးတရားသိတတ်ခြင်း၊ သင့်တော်သောအချိန်တွင် တရားနာခြင်းသည် အမြင့်မြတ်ဆုံးသော မင်္ဂလာဖြစ်သည်။
+          </div>
+
+          <div class="verse">
+            <strong>၉။</strong>
+            သည်းခံနိုင်ခြင်း၊ ဆုံးမလွယ်ခြင်း၊ သမဏသူတော်ကောင်းတို့ကို ဖူးမြော်ရခြင်း၊ သင့်တော်သောအချိန်တွင် တရားဆွေးနွေးခြင်းသည် အမြင့်မြတ်ဆုံးသော မင်္ဂလာဖြစ်သည်။
+          </div>
+
+          <div class="verse">
+            <strong>၁၀။</strong>
+            ခန္တီ၊ သီလ၊ သမာဓိတို့ဖြင့် မိမိကိုယ်ကို ထိန်းကျောင်းကျင့်ကြံခြင်း၊ မြတ်သောအကျင့်ကို ကျင့်ခြင်း၊ အရိယသစ္စာလေးပါးကို သိမြင်ခြင်း၊ နိဗ္ဗာန်ကို မျက်မှောက်ပြုခြင်းသည် အမြင့်မြတ်ဆုံးသော မင်္ဂလာဖြစ်သည်။
+          </div>
+
+          <div class="verse">
+            <strong>၁၁။</strong>
+            လောကဓံတရားများနှင့် တွေ့ကြုံရသော်လည်း စိတ်မလှုပ်ရှားခြင်း၊ စိုးရိမ်ပူဆွေးမှုကင်းခြင်း၊ ကိလေသာမှုန်ကင်းခြင်း၊ ဘေးရန်ကင်းလုံခြုံခြင်းသည် အမြင့်မြတ်ဆုံးသော မင်္ဂလာဖြစ်သည်။
+          </div>
+
+          <div class="verse">
+            <strong>နိဂုံး။</strong>
+            ဤမင်္ဂလာတရားများကို ပြုကျင့်သူတို့သည် နေရာတိုင်း၌ မရှုံးနိမ့်ကြဘဲ၊ နေရာတိုင်း၌ ချမ်းသာဘေးကင်းမှုကို ရရှိကြသည်။ ထိုအရာသည် သူတို့အတွက် အမြင့်မြတ်ဆုံးသော မင်္ဂလာဖြစ်သည်။
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sutta" id="ratana">
+      <span class="status">နောက်တစ်ပိုင်းတွင် ထည့်ရန်</span>
+      <h2>၂။ ရတနသုတ်</h2>
+      <p>ဤနေရာတွင် ရတနသုတ်၏ ပါဠိစာသားနှင့် မြန်မာအနက်ကို ထည့်ပါမည်။</p>
+    </section>
+
+    <section class="sutta" id="metta">
+      <span class="status">နောက်တစ်ပိုင်းတွင် ထည့်ရန်</span>
+      <h2>၃။ မေတ္တသုတ်</h2>
+      <p>ဤနေရာတွင် မေတ္တသုတ်၏ ပါဠိစာသားနှင့် မြန်မာအနက်ကို ထည့်ပါမည်။</p>
+    </section>
+
+    <section class="sutta" id="khandha">
+      <span class="status">နောက်တစ်ပိုင်းတွင် ထည့်ရန်</span>
+      <h2>၄။ ခန္ဓသုတ်</h2>
+      <p>ဤနေရာတွင် ခန္ဓသုတ်၏ ပါဠိစာသားနှင့် မြန်မာအနက်ကို ထည့်ပါမည်။</p>
+    </section>
+
+    <section class="sutta" id="mora">
+      <span class="status">နောက်တစ်ပိုင်းတွင် ထည့်ရန်</span>
+      <h2>၅။ မောရသုတ်</h2>
+      <p>ဤနေရာတွင် မောရသုတ်၏ ပါဠိစာသားနှင့် မြန်မာအနက်ကို ထည့်ပါမည်။</p>
+    </section>
+
+    <section class="sutta" id="vatta">
+      <span class="status">နောက်တစ်ပိုင်းတွင် ထည့်ရန်</span>
+      <h2>၆။ ဝဋ္ဋသုတ်</h2>
+      <p>ဤနေရာတွင် ဝဋ္ဋသုတ်၏ ပါဠိစာသားနှင့် မြန်မာအနက်ကို ထည့်ပါမည်။</p>
+    </section>
+
+    <section class="sutta" id="dhajagga">
+      <span class="status">နောက်တစ်ပိုင်းတွင် ထည့်ရန်</span>
+      <h2>၇။ ဓဇဂ္ဂသုတ်</h2>
+      <p>ဤနေရာတွင် ဓဇဂ္ဂသုတ်၏ ပါဠိစာသားနှင့် မြန်မာအနက်ကို ထည့်ပါမည်။</p>
+    </section>
+
+    <section class="sutta" id="atanatiya">
+      <span class="status">နောက်တစ်ပိုင်းတွင် ထည့်ရန်</span>
+      <h2>၈။ အာဋာနာဋိယသုတ်</h2>
+      <p>ဤနေရာတွင် အာဋာနာဋိယသုတ်၏ ပါဠိစာသားနှင့် မြန်မာအနက်ကို ထည့်ပါမည်။</p>
+    </section>
+
+    <section class="sutta" id="angulimala">
+      <span class="status">နောက်တစ်ပိုင်းတွင် ထည့်ရန်</span>
+      <h2>၉။ အင်္ဂုလိမာလသုတ်</h2>
+      <p>ဤနေရာတွင် အင်္ဂုလိမာလသုတ်၏ ပါဠိစာသားနှင့် မြန်မာအနက်ကို ထည့်ပါမည်။</p>
+    </section>
+
+    <section class="sutta" id="bojjhanga">
+      <span class="status">နောက်တစ်ပိုင်းတွင် ထည့်ရန်</span>
+      <h2>၁၀။ ဗောဇ္ဈင်္ဂသုတ်</h2>
+      <p>ဤနေရာတွင် ဗောဇ္ဈင်္ဂသုတ်၏ ပါဠိစာသားနှင့် မြန်မာအနက်ကို ထည့်ပါမည်။</p>
+    </section>
+
+    <section class="sutta" id="pubbanha">
+      <span class="status">နောက်တစ်ပိုင်းတွင် ထည့်ရန်</span>
+      <h2>၁၁။ ပုဗ္ဗဏှသုတ်</h2>
+      <p>ဤနေရာတွင် ပုဗ္ဗဏှသုတ်၏ ပါဠိစာသားနှင့် မြန်မာအနက်ကို ထည့်ပါမည်။</p>
+    </section>
+
+    <footer>
+      ပရိတ်ကြီး ၁၁ သုတ် — ပါဠိနှင့် မြန်မာအနက် | Blog ဖတ်ရှုရန် HTML မူ
+    </footer>
+  </main>
+</body>
+</html>
