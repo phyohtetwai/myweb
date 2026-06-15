@@ -81,20 +81,34 @@
     <!-- Main Birthday Content -->
     <main id="main-content" class="hidden h-full-screen flex flex-row items-center justify-center p-8 min-w-[1280px]">
 
-        <!-- Left Column: Slideshow -->
+        <!-- Left Column: Slideshow with GIF Background -->
         <div class="w-1/2 max-w-none mr-8 fade-in-scale" style="animation-delay: 0.2s;">
-            <div class="relative bg-white dark:bg-gray-800 p-3 shadow-2xl rounded-3xl overflow-hidden border-4 border-pink-500">
-                
-                <img
-                    id="slideshow-image"
-                    src=""
-                    alt="Birthday Memory"
-                    class="w-full h-[400px] object-cover rounded-2xl transition-opacity duration-1000 ease-in-out opacity-100"
-                >
+            <div class="relative p-6 shadow-2xl rounded-3xl overflow-hidden border-4 border-pink-500">
 
-                <div class="absolute bottom-3 left-3 right-3 p-4 bg-black bg-opacity-50 text-white rounded-b-2xl">
-                    <p id="slideshow-caption" class="text-lg font-semibold text-center"></p>
+                <!-- GIF Background Layer -->
+                <div
+                    class="absolute inset-0 bg-cover bg-center opacity-80"
+                    style="background-image: url('bg.gif');">
                 </div>
+
+                <!-- Dark Overlay -->
+                <div class="absolute inset-0 bg-black bg-opacity-20"></div>
+
+                <!-- Slideshow Image Layer -->
+                <div class="relative z-10 bg-white/80 dark:bg-gray-800/80 p-3 rounded-2xl shadow-xl">
+                    <img
+                        id="slideshow-image"
+                        src=""
+                        alt="Birthday Memory"
+                        class="w-full h-[400px] object-cover rounded-2xl transition-opacity duration-1000 ease-in-out opacity-100"
+                    >
+
+                    <!-- Caption -->
+                    <div class="absolute bottom-3 left-3 right-3 p-4 bg-black bg-opacity-50 text-white rounded-b-2xl">
+                        <p id="slideshow-caption" class="text-lg font-semibold text-center"></p>
+                    </div>
+                </div>
+
             </div>
         </div>
 
