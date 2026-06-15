@@ -52,10 +52,19 @@
             min-width: 1280px;
             overflow-x: auto;
         }
+
+        /* Full Page GIF Background */
+        .page-gif-bg {
+            background-image: url('bg.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
     </style>
 </head>
 
-<body class="bg-pink-50 dark:bg-gray-900 text-gray-800 dark:text-gray-100 transition-colors duration-500">
+<body class="page-gif-bg text-gray-800 dark:text-gray-100 transition-colors duration-500">
 
     <!-- Hidden MP3 Audio Player -->
     <audio id="birthday-audio" loop preload="auto" crossorigin="anonymous">
@@ -79,23 +88,18 @@
     </div>
 
     <!-- Main Birthday Content -->
-    <main id="main-content" class="hidden h-full-screen flex flex-row items-center justify-center p-8 min-w-[1280px]">
+    <main id="main-content" class="hidden relative h-full-screen flex flex-row items-center justify-center p-8 min-w-[1280px]">
 
-        <!-- Left Column: Slideshow with GIF Background -->
-        <div class="w-1/2 max-w-none mr-8 fade-in-scale" style="animation-delay: 0.2s;">
-            <div class="relative p-6 shadow-2xl rounded-3xl overflow-hidden border-4 border-pink-500">
+        <!-- Full Page Dark Overlay -->
+        <div class="absolute inset-0 bg-black bg-opacity-30"></div>
 
-                <!-- GIF Background Layer -->
-                <div
-                    class="absolute inset-0 bg-cover bg-center opacity-80"
-                    style="background-image: url('bg.jpg');">
-                </div>
+        <!-- Content Wrapper -->
+        <div class="relative z-10 flex flex-row items-center justify-center w-full">
 
-                <!-- Dark Overlay -->
-                <div class="absolute inset-0 bg-black bg-opacity-20"></div>
-
-                <!-- Slideshow Image Layer -->
-                <div class="relative z-10 bg-white/80 dark:bg-gray-800/80 p-3 rounded-2xl shadow-xl">
+            <!-- Left Column: Slideshow -->
+            <div class="w-1/2 max-w-none mr-8 fade-in-scale" style="animation-delay: 0.2s;">
+                <div class="relative bg-white/80 dark:bg-gray-800/80 p-3 shadow-2xl rounded-3xl overflow-hidden border-4 border-pink-500">
+                    
                     <img
                         id="slideshow-image"
                         src=""
@@ -108,38 +112,37 @@
                         <p id="slideshow-caption" class="text-lg font-semibold text-center"></p>
                     </div>
                 </div>
-
             </div>
-        </div>
 
-        <!-- Right Column: Wish Card -->
-        <div class="w-1/2 max-w-lg fade-in-scale" style="animation-delay: 0.4s;">
-            <div class="p-12 bg-white dark:bg-gray-800 rounded-3xl shadow-2xl border-4 border-purple-500 transform transition-transform duration-500 hover:scale-[1.02]">
-                
-                <h2 class="text-5xl font-extrabold text-pink-600 dark:text-pink-400 mb-4 tracking-tighter">
-                    Happy Birthday, Lin Lai
-                </h2>
+            <!-- Right Column: Wish Card -->
+            <div class="w-1/2 max-w-lg fade-in-scale" style="animation-delay: 0.4s;">
+                <div class="p-12 bg-white/90 dark:bg-gray-800/90 rounded-3xl shadow-2xl border-4 border-purple-500 transform transition-transform duration-500 hover:scale-[1.02]">
+                    
+                    <h2 class="text-5xl font-extrabold text-pink-600 dark:text-pink-400 mb-4 tracking-tighter">
+                        Happy Birthday, Lin Lai
+                    </h2>
 
-                <h3 class="text-2xl font-semibold text-purple-700 dark:text-purple-300 mb-6">
-                    Another year, another adventure together!
-                </h3>
+                    <h3 class="text-2xl font-semibold text-purple-700 dark:text-purple-300 mb-6">
+                        Another year, another adventure together!
+                    </h3>
 
-                <p class="text-lg leading-relaxed text-gray-700 dark:text-gray-200 border-l-4 border-yellow-500 pl-4 py-2 italic">
-                    "My dearest, on your special day, I wish you all the joy, laughter, and success in the world.
-                    Every moment with you is a gift, and I look forward to making a million more unforgettable memories.
-                    You light up my life, and I love you more than words can say.
-                    May this year be your brightest one yet!"
-                </p>
-
-                <div class="mt-8 text-right">
-                    <p class="text-xl text-pink-600 dark:text-pink-400">
-                        — Forever Yours, Ko Phyo
+                    <p class="text-lg leading-relaxed text-gray-700 dark:text-gray-200 border-l-4 border-yellow-500 pl-4 py-2 italic">
+                        "My dearest, on your special day, I wish you all the joy, laughter, and success in the world.
+                        Every moment with you is a gift, and I look forward to making a million more unforgettable memories.
+                        You light up my life, and I love you more than words can say.
+                        May this year be your brightest one yet!"
                     </p>
+
+                    <div class="mt-8 text-right">
+                        <p class="text-xl text-pink-600 dark:text-pink-400">
+                            — Forever Yours, Ko Phyo
+                        </p>
+                    </div>
+
                 </div>
-
             </div>
-        </div>
 
+        </div>
     </main>
 
     <script>
