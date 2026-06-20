@@ -1,0 +1,323 @@
+#EXTM3U
+#EXT-X-VERSION:3
+#EXT-X-MEDIA-SEQUENCE:0
+#EXT-X-TARGETDURATION:10
+
+#EXT-X-MEDIA:TYPE=AUDIO,GROUP-ID="audio",NAME="English",LANGUAGE="eng",DEFAULT=YES,AUTOSELECT=YES
+
+#EXT-X-STREAM-INF:BANDWIDTH=250000,CODECS="mp4a.40.2,avc1.42001E",RESOLUTION=640x360
+https://pastebin.com/raw/S6hRHRPN
+
+
+#EXTINF:-1 group-title="MYANMAR",Mahar BAWDI
+https://pplive.comquas.com:5443/LiveApp/streams/rHEBIW7pjQLU1677679374164.m3u8
+
+#EXTINF:-1 group-title="MYANMAR",Mahar BAWDI 2
+https://ppradio.b-cdn.net/LiveApp/streams/rHEBIW7pjQLU1677679374164.m3u8
+
+#EXTINF:-1 group-title="MYANMAR",MRTV_4_HD
+https://pplive.comquas.com:5443/LiveApp/streams/9AUG8Y4aKVmk1762750828463.m3u8
+
+#EXTINF:-1 group-title="MYANMAR",CHANNEL7_HD
+https://pplive.comquas.com:5443/LiveApp/streams/CLcBFN71NkF61709008601656.m3u8
+
+#EXTINF:-1 group-title="MYANMAR",PyonePlay Sports HD
+https://mm-test-cdn.tenbyte.io/ta-sg1/9b1a4c05-9151-4084-a415-6e6f6a245ec1/480p/index.m3u8
+
+
+#EXTINF:-1 group-title="MYANMAR",MAHAR TV
+https://tv.mahar.live/mahar/website.stream/playlist.m3u8
+
+#EXTINF:-1 group-title="MYANMAR",MAHAR SPORTS 
+https://tv.mahar.live/esports/mahar.stream/esports/mahar2/chunks.m3u8
+
+#EXTINF:-1 group-title="MYANMAR",DVB NEW
+https://live-stream.dvb.no/hls/stream_high/index.m3u8
+
+#EXTINF:-1 group-title="MYANMAR",MWD HD
+http://203.81.84.130/hls/mwd/index.m3u8
+
+#EXTINF:-1 group-title="MYANMAR",TVM
+http://203.81.84.130/hls/mwd_serie/index.m3u8
+
+#EXTINF:-1 group-title="MYANMAR",GOLDEN 
+http://203.81.84.130/hls/mwd_document/index.m3u8
+
+#EXTINF:-1 group-title="MYANMAR",C LIGHT
+http://203.81.84.130/hls/mwd_family/index.m3u8
+
+#EXTINF:-1 group-title="MYANMAR",MWD SCHOOL
+http://203.81.84.130/hls/mwd_movie/index.m3u8
+
+#EXTINF:-1 group-title="MYANMAR",Fortune TV HD
+http://103.215.194.93:8282/hls/fortunetv/live/vmix_1080.m3u8
+
+
+
+#EXTINF:-1 group-title="WORLD CUP SPORTS",WORLD CUP 2026 4K
+http://starhub.pro/live/farhat-3379/67897-913379/745270.ts
+
+
+#EXTINF:-1 group-title="WORLD CUP SPORTS",WORLD CUP 2026 4K1
+http://starhub.pro/live/farhat-3379/67897-913379/745269.ts
+
+
+#EXTINF:-1 group-title="WORLD CUP SPORTS",WORLD CUP 2026 HD1
+http://starhub.pro/live/farhat-3379/67897-913379/742610.ts
+
+
+#EXTINF:-1 group-title="WORLD CUP SPORTS",WORLD CUP 2026 HD2
+http://starhub.pro/live/farhat-3379/67897-913379/742611.ts
+
+
+#EXTINF:-1 group-title="WORLD CUP SPORTS",WORLD CUP 2026 HD
+http://starhub.pro/live/farhat-3379/67897-913379/130714.ts
+
+
+
+
+#EXTINF:-1 group-title="WORLD CUP SPORTS",SPORTS 1
+http://psk-sdk.ddno.us:8080/live/641cae119cf3/32jq23CGfQCARX3/248182.ts
+
+#EXTINF:-1 group-title="WORLD CUP SPORTS",SPORTS 1
+http://psk-sdk.ddno.us:8080/live/641cae119cf3/32jq23CGfQCARX3/248170.ts
+
+
+#EXTINF:-1 group-title="WORLD CUP SPORTS",SPORTS 2
+http://psk-sdk.ddno.us:8080/live/641cae119cf3/32jq23CGfQCARX3/248171.ts
+
+#EXTINF:-1 group-title="WORLD CUP SPORTS",SPORTS 3
+http://psk-sdk.ddno.us:8080/live/641cae119cf3/32jq23CGfQCARX3/248172.ts
+
+
+#EXTINF:-1 group-title="WORLD CUP SPORTS",SPORTS 4
+http://t77ert.top:80/live/d0:d0:03:36:33:7e/eqzw0eux/248173.ts
+
+#EXTINF:-1 group-title="WORLD CUP SPORTS",SPORTS 5
+http://psk-sdk.ddno.us:8080/live/641cae119cf3/32jq23CGfQCARX3/248174.ts
+
+
+#EXTINF:-1 group-title="TEST SPORTS",SPORTS 01
+https://pullsgp.yyzb456.top/live/stream-308116_lhd.flv?auth_key=1781370408-0-0-44d933df803e80cc10080a1d349449c4
+
+
+#EXTINF:-1 group-title="TEST SPORTS",SPORTS 02
+https://pullsgp.yyzb456.top/live/stream-765648_lhd.flv?auth_key=1781370288-0-0-7021e7ebc6a683782b0bed8b70b8a86f
+
+
+#EXTINF:-1 group-title="TEST SPORTS",SPORTS 03
+https://pullsgp.yyzb456.top/live/stream-7988511_lhd.flv?auth_key=1781458668-0-0-11157346e8b34fcf218decaa9e0c0e4d
+
+#EXTINF:-1 group-title="TEST SPORTS",SPORTS 04
+https://pullsgp.yyzb456.top/live/stream-606060_lhd.flv?auth_key=1781457468-0-0-5c2c485e71c9024ee59e80459b50b27d
+
+
+
+#EXTINF:-1 group-title="TEST SPORTS",SPORTS 05
+https://pullsgp.yyzb456.top/live/stream-516701_lhd.flv?auth_key=1781457468-0-0-5e4de14d55c8c4fa0657e9f26f258116
+
+
+
+#EXTINF:-1 group-title="TEST SPORTS",SPORTS 06
+https://pullsgp.yyzb456.top/live/stream-239803_lhd.flv?auth_key=1781456688-0-0-1db96304954328d009f3d09cd6a11e33
+
+
+
+#EXTINF:-1 group-title="TEST SPORTS",SPORTS 07
+https://pullsgp.yyzb456.top/live/stream-990645_lhd.flv?auth_key=1781456748-0-0-50f6e7604e541e69e59e39a17f0a13b3
+
+
+
+#EXTINF:-1 group-title="TEST SPORTS",SPORTS 08
+https://pullsgp.yyzb456.top/live/stream-491355_lhd.flv?auth_key=1781456988-0-0-9e7969652d2a2613ebb9e0f530499361
+
+
+
+
+#EXTINF:-1 group-title="TEST SPORTS",COCA SPORTS
+https://pull.niues.live/live/stream-327159_lhd.m3u8?auth_key=1781414660-0-0-9db1db80df47e77bb9fd80d752529092
+
+
+#EXTINF:-1 group-title="TEST SPORTS",MESSI SPORTS
+https://pull.niues.live/live/stream-494201_lhd.m3u8?auth_key=1781414721-0-0-1cfd90621904993b617f3f9c81d6d5dd
+
+
+#EXTINF:-1 group-title="TEST SPORTS",7UP SPORTS
+https://pull.niues.live/live/stream-534219_lhd.m3u8?auth_key=1781414721-0-0-c2d4ec8727a4628c6b9220de69e49117
+
+
+
+
+
+
+
+
+
+
+#EXTINF:-1 group-title="SPORTS",BEIN 1 SD
+http://t77ert.top:80/live/d0:d0:03:36:33:7e/eqzw0eux/125319.ts
+
+#EXTINF:-1 group-title="SPORTS",BEIN 2 SD
+http://t77ert.top:80/live/d0:d0:03:36:33:7e/eqzw0eux/125320.ts
+
+#EXTINF:-1 group-title="SPORTS",BEIN 3 SD
+http://t77ert.top:80/live/d0:d0:03:36:33:7e/eqzw0eux/125321.ts
+
+#EXTINF:-1 group-title="SPORTS",BEIN 4 SD
+http://t77ert.top:80/live/d0:d0:03:36:33:7e/eqzw0eux/125322.ts
+
+#EXTINF:-1 group-title="SPORTS",BEIN 5 SD
+http://t77ert.top:80/live/d0:d0:03:36:33:7e/eqzw0eux/125323.ts
+
+#EXTINF:-1 group-title="SPORTS",BEIN SPORT 1
+http://stap2025.me:8080/live/nsbp46qijx/ukbyu5668f/2541.ts
+
+#EXTINF:-1 group-title="SPORTS",BEIN SPORT 2
+http://stap2025.me:8080/live/nsbp46qijx/ukbyu5668f/2540.ts
+
+#EXTINF:-1 group-title="SPORTS",BEIN SPORT 3
+http://stap2025.me:8080/live/nsbp46qijx/ukbyu5668f/2538.ts
+
+#EXTINF:-1 group-title="SPORTS",BEIN SPORT 4
+http://stap2025.me:8080/live/nsbp46qijx/ukbyu5668f/10795.ts
+
+#EXTINF:-1 group-title="SPORTS",BEIN SPORT 5
+http://stap2025.me:8080/live/nsbp46qijx/ukbyu5668f/2536.ts
+
+
+
+
+#EXTINF:-1 group-title="SPORTS",SPORT SD 1
+http://t77ert.top:80/live/d0:d0:03:36:33:7e/eqzw0eux/237016.ts
+
+#EXTINF:-1 group-title="SPORTS",SPORT SD 2
+http://t77ert.top:80/live/d0:d0:03:36:33:7e/eqzw0eux/237019.ts
+
+#EXTINF:-1 group-title="SPORTS",SPORT SD 3
+http://t77ert.top:80/live/d0:d0:03:36:33:7e/eqzw0eux/237022.ts
+
+#EXTINF:-1 group-title="SPORTS",SPORT SD 4
+http://t77ert.top:80/live/d0:d0:03:36:33:7e/eqzw0eux/237025.ts
+
+#EXTINF:-1 group-title="SPORTS",SPORT SD 5
+http://t77ert.top:80/live/d0:d0:03:36:33:7e/eqzw0eux/237028.ts
+
+#EXTINF:-1 group-title="SPORTS",SPORT SD 6
+http://bcnemtu.mkech.xyz:80/live/BakaryTV032025/5358841398/1276532.ts
+
+#EXTINF:-1 group-title="SPORTS",ALWAN SPORT 1
+http://stap2025.me:8080/live/nsbp46qijx/ukbyu5668f/1641624.ts
+
+#EXTINF:-1 group-title="SPORTS",ALWAN SPORT 2
+http://stap2025.me:8080/live/nsbp46qijx/ukbyu5668f/1641625.ts
+
+#EXTINF:-1 group-title="SPORTS",ALWAN SPORT 3
+http://stap2025.me:8080/live/nsbp46qijx/ukbyu5668f/1641626.ts
+
+#EXTINF:-1 group-title="SPORTS",ALWAN SPORT 4
+http://stap2025.me:8080/live/nsbp46qijx/ukbyu5668f/1641627.ts
+
+#EXTINF:-1 group-title="SPORTS",ALWAN SPORT 5
+http://stap2025.me:8080/live/nsbp46qijx/ukbyu5668f/1641628.ts
+
+#EXTINF:-1 group-title="SPORTS",ALWAN SPORT 6
+http://stap2025.me:8080/live/nsbp46qijx/ukbyu5668f/1641629.ts
+
+#EXTINF:-1 group-title="SPORTS",CANAL+SPORT 1 sd
+http://t77ert.top:80/live/d0:d0:03:36:33:7e/eqzw0eux/232526.ts
+
+#EXTINF:-1 group-title="SPORTS",CANAL+SPORT 2 sd
+http://t77ert.top:80/live/d0:d0:03:36:33:7e/eqzw0eux/232527.ts
+
+#EXTINF:-1 group-title="SPORTS",CANAL+SPORT 3 sd
+http://t77ert.top:80/live/d0:d0:03:36:33:7e/eqzw0eux/232528.ts
+
+#EXTINF:-1 group-title="SPORTS",CANAL+SPORT 4 sd
+http://t77ert.top:80/live/d0:d0:03:36:33:7e/eqzw0eux/232529.ts
+
+#EXTINF:-1 group-title="SPORTS",CANAL+SPORT 5 sd
+http://t77ert.top:80/live/d0:d0:03:36:33:7e/eqzw0eux/232530.ts
+
+#EXTINF:-1 group-title="SPORTS",CANAL+SPORT 1
+http://stap2025.me:8080/live/nsbp46qijx/ukbyu5668f/151081.ts
+
+#EXTINF:-1 group-title="SPORTS",CANAL+SPORT 2
+http://stap2025.me:8080/live/nsbp46qijx/ukbyu5668f/151082.ts
+
+#EXTINF:-1 group-title="SPORTS",CANAL+SPORT 3
+http://stap2025.me:8080/live/nsbp46qijx/ukbyu5668f/151083.ts
+
+#EXTINF:-1 group-title="SPORTS",CANAL+SPORT 4
+http://stap2025.me:8080/live/nsbp46qijx/ukbyu5668f/151084.ts
+
+#EXTINF:-1 group-title="SPORTS",CANAL+SPORT 5
+http://stap2025.me:8080/live/nsbp46qijx/ukbyu5668f/151085.ts
+
+#EXTINF:-1 group-title="SPORTS",MoNo MaX EPL 1
+http://stap2025.me:8080/live/nsbp46qijx/ukbyu5668f/1776175.ts
+
+#EXTINF:-1 group-title="SPORTS",MoNo MaX EPL 2
+http://stap2025.me:8080/live/nsbp46qijx/ukbyu5668f/1776176.ts
+
+#EXTINF:-1 group-title="SPORTS",CANAL+ EPL 3 SD
+http://t77ert.top:80/live/d0:d0:03:36:33:7e/eqzw0eux/232528.ts
+
+#EXTINF:-1 group-title="SPORTS",STAR SELECT EPL 1
+http://stap2025.me:8080/live/nsbp46qijx/ukbyu5668f/276734.ts
+
+#EXTINF:-1 group-title="SPORTS",STAR SELECT EPL 2
+http://stap2025.me:8080/live/nsbp46qijx/ukbyu5668f/276735.ts
+
+#EXTINF:-1 group-title="SPORTS",SKY SPORT EPL 1
+http://stap2025.me:8080/live/nsbp46qijx/ukbyu5668f/205919.ts
+
+#EXTINF:-1 group-title="SPORTS",VIP TRUE BEIN 1
+http://stap2025.me:8080/live/nsbp46qijx/ukbyu5668f/1776210.ts
+
+#EXTINF:-1 group-title="SPORTS",VIP TRUE BEIN 3
+http://stap2025.me:8080/live/nsbp46qijx/ukbyu5668f/1776212.ts
+
+
+#EXTINF:-1 group-title="MOVIE CHANNEL",CANAL+ACTION
+http://t77ert.top:80/live/d0:d0:03:36:33:7e/eqzw0eux/232532.ts
+
+#EXTINF:-1 group-title="MOVIE CHANNEL",C+ACTION
+http://t77ert.top:80/live/d0:d0:03:36:33:7e/eqzw0eux/232552.ts
+
+#EXTINF:-1 group-title="MOVIE CHANNEL",STAR Action
+http://psk-sdk.ddno.us:8080/live/641cae119cf3/32jq23CGfQCARX3/201901.ts
+
+#EXTINF:-1 group-title="MOVIE CHANNEL",MARVEL BOX 1
+http://psk-sdk.ddno.us:8080/live/641cae119cf3/32jq23CGfQCARX3/124221.ts
+
+#EXTINF:-1 group-title="MOVIE CHANNEL",MARVEL BOX 2
+http://psk-sdk.ddno.us:8080/live/641cae119cf3/32jq23CGfQCARX3/124223.ts
+
+#EXTINF:-1 group-title="MOVIE CHANNEL",MOVIE BOX
+http://vpnca.ipnowstore.com:80/live/5RPZHK8K/LEM3ALXY/33455.ts
+
+#EXTINF:-1 group-title="MOVIE CHANNEL",MBC MOVIE 2
+http://psk-sdk.ddno.us:8080/live/641cae119cf3/32jq23CGfQCARX3/5662.ts
+
+#EXTINF:-1 group-title="MOVIE CHANNEL",MBC MOVIE MAX
+http://psk-sdk.ddno.us:8080/live/641cae119cf3/32jq23CGfQCARX3/5654.ts
+
+#EXTINF:-1 group-title="MOVIE CHANNEL",MOVIE Hollywood 
+http://psk-sdk.ddno.us:8080/live/641cae119cf3/32jq23CGfQCARX3/6332.ts
+
+#EXTINF:-1 group-title="MOVIE CHANNEL",ShowTime Movie
+http://psk-sdk.ddno.us:8080/live/641cae119cf3/32jq23CGfQCARX3/238257.ts
+
+#EXTINF:-1 group-title="MOVIE CHANNEL",HBO Hits
+http://t77ert.top:80/live/d0:d0:03:36:33:7e/eqzw0eux/238303.ts
+
+#EXTINF:-1 group-title="MOVIE CHANNEL",HBO Latino
+http://t77ert.top:80/live/d0:d0:03:36:33:7e/eqzw0eux/238300.ts
+
+#EXTINF:-1 group-title="MOVIE CHANNEL",STARZ Cinema 
+http://t77ert.top:80/live/d0:d0:03:36:33:7e/eqzw0eux/238279.ts
+
+#EXTINF:-1 group-title="MOVIE CHANNEL",FX Movies 
+http://t77ert.top:80/live/d0:d0:03:36:33:7e/eqzw0eux/238318.ts
+
+
