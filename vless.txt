@@ -1,0 +1,1 @@
+vless://f128742c-5f5a-4f9c-ae44-3ccea7831d19@mpt.com.mm:443?path=%2Fczgolive&security=tls&encryption=none&host=firgo.laserstore.site&type=ws&sni=firgo.laserstore.site#FirVip-Unlimited%20By%20Cz%20Jun30
