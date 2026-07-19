@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="my">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Love Mission</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section id="introScreen" class="screen is-active">
+        <div class="card intro-card">
+          <div class="mascot ghost">♡</div>
+          <h1>ချစ်သူဖြစ်ပေးမလား?</h1>
+          <p class="subtitle">အဖြေမှန်ကိုရွေးပြီး mission လေးစမယ်နော်</p>
+          <div class="choice-list">
+            <button class="choice-btn wrong-choice">မသိသေးဘူး</button>
+            <button class="choice-btn correct-choice">ဖြစ်ပေးမယ်</button>
+            <button class="choice-btn wrong-choice">စဉ်းစားဦးမယ်</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="promiseScreen" class="screen">
+        <div class="card promise-card">
+          <div class="mascot avatar">🎧</div>
+          <h2>အဖြေမှန်ပြီနော်!</h2>
+          <p>
+            အခု heart 10 ခုကိုဖမ်းပြီး ချစ်ခြင်း mission ကိုပြီးအောင်လုပ်ပါ။
+          </p>
+          <button id="startGameBtn" class="primary-btn">Mission စမယ်</button>
+        </div>
+      </section>
+
+      <section id="gameScreen" class="screen game-screen">
+        <div class="sky">
+          <div class="moon"></div>
+          <div class="cloud cloud-one"></div>
+          <div class="cloud cloud-two"></div>
+          <div class="hills"></div>
+        </div>
+
+        <header class="mission-bar">
+          <span>Mission: <strong id="missionCount">0 / 10</strong></span>
+          <div class="progress-track">
+            <div id="missionProgress" class="progress-fill"></div>
+          </div>
+        </header>
+
+        <div id="comboText" class="combo-text"></div>
+        <div id="gameField" class="game-field" aria-label="Heart catching game"></div>
+        <div id="crosshair" class="crosshair"></div>
+        <div class="player">👩‍🎤</div>
+      </section>
+
+      <section id="processingScreen" class="screen">
+        <div class="confetti-bg"></div>
+        <div class="card loading-card">
+          <div class="loader"></div>
+          <p>Processing My Love...</p>
+        </div>
+      </section>
+
+      <section id="finalScreen" class="screen">
+        <div class="confetti-bg"></div>
+        <div class="card final-card">
+          <h2>I Love You <span>👑</span></h2>
+
+          <label class="photo-frame">
+            <input id="photoInput" type="file" accept="image/*" />
+            <img id="memoryPhoto" alt="Our best memory" />
+            <span id="photoPlaceholder">ဓာတ်ပုံထည့်ရန်နှိပ်ပါ</span>
+          </label>
+
+          <p class="caption">♡ Our Best Memory</p>
+          <p class="love-letter">
+            မင်းနဲ့တွေ့ပြီးနောက်ပိုင်း နေ့ရက်တိုင်းက ပိုနူးညံ့လာတယ်။
+            အမြဲတမ်းပြုံးနေနိုင်အောင်၊ အမြဲတမ်းဂရုစိုက်ပေးနိုင်အောင်
+            ကြိုးစားမယ်နော်။
+          </p>
+
+          <div class="final-actions">
+            <button id="homeBtn" class="text-btn">Home</button>
+            <button id="muahBtn" class="pink-btn">နမ်းမယ်</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="modal" class="modal" aria-hidden="true">
+      <div class="modal-card">
+        <button id="modalClose" class="modal-x" aria-label="Close">×</button>
+        <div id="modalIcon" class="modal-icon">✕</div>
+        <h3 id="modalTitle">မရသေးဘူးနော်</h3>
+        <p id="modalMessage">ဒီအဖြေက မမှန်သေးဘူး။ ပြန်ရွေးကြည့်ပါ။</p>
+        <button id="modalButton" class="primary-btn">ပြန်လုပ်မယ်</button>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
